@@ -1,3 +1,2 @@
-fs = require("fs")
+import Option from "./option"
 
-console.log(fs.createReadStream.toString())
