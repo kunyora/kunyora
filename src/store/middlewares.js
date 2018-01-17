@@ -4,7 +4,7 @@ import invariant from "invariant";
 export default function createComposerThunk({
   useBeforeRequest,
   useAfterResponse
-}) {
+} = {}) {
   return ({ dispatch, getState }) => next => action => {
     switch (action.type) {
       case types.COMPOSER_SEND_REQUEST_HEADER_CMD:
