@@ -1,4 +1,4 @@
-import * as types from "../types";
+import * as types from "./types";
 import invariant from "invariant";
 
 export default function createComposerThunk({

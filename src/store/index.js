@@ -1,7 +1,7 @@
 import createComposerThunk from "./middlewares";
-import reducers from "./reducers";
+import * as reducers from "./reducers";
 
 export default config => ({
   middlewares: createComposerThunk,
-  reducers
+  reducers: Object.assign({}, reducers)
 })

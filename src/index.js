@@ -1,3 +1,5 @@
-fs = require("fs")
+import store from "./store";
 
-console.log(fs.createReadStream.toString())
+let reducers = store({ endPoint: "gad" })
+
+console.log(reducers.middlewares);
