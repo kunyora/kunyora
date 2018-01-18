@@ -1,3 +1,5 @@
-fs = require("fs")
+import req from "./req"
 
-console.log(fs.createReadStream.toString())
+module.exports= function (config) {
+	return req(config)
+}
