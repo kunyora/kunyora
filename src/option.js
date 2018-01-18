@@ -1,7 +1,6 @@
 import invariant from "invariant"
 
 const defaultConfig = {
-	rootPath: "",
 	nouns: [],
 	thenables: {},
 	catchables: {},
@@ -11,10 +10,7 @@ const defaultConfig = {
 export default function Option(config) {
 	let option = Object.assign({}, defaultConfig, config);
 	option.nouns = generateNouns(option);
-	option.rootPath = parseRootPath(option);
-	option.endpoint = generateEndpoint(option);
 	//validate thenables and catchables
-	validateThenableCatchable(option);
 
 
 	return option
@@ -47,37 +43,4 @@ function validateNounString(str, v) {
 function validateNoun({path, name}) {
 	validateNounString(path, "path");
 	validateNounString(name, "name")
-}
-
-function validateDomain(domain) {
-	invariant(typeof domain === "string", "domain passed to config must be a string");
-	//Todo: improve regexp
-	invariant(/^https?:\/\//.test(domain), "domain is not a valid url domain")
-}
-
-function parseRootPath({rootPath = ""}) {
-	return rootPath
-}
-
-/**
- *
- * @param domain
- * @param rootPath
- * @return {string}
- */
-function generateEndpoint({domain, rootPath}) {
-	//validate the domain
-	validateDomain(domain);
-	return `${domain.replace(/\/$/, "")}/${rootPath.replace(/^\//, "")}`
-}
-
-function validateThenableCatchable({thenables, catchables}) {
-	function validateState(obj) {
-		for (let prop in obj) {
-			invariant(typeof obj[prop] === "function", `the property ${prop} is not a type function`)
-		}
-	}
-
-	validateState(thenables);
-	validateState(catchables)
 }
