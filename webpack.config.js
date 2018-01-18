@@ -4,26 +4,45 @@
 const path = require('path');
 const webpack = require('webpack');
 
-module.exports = {
-    entry: {
-        index: ['./src/index.js'],
-    },
+const common = {
+	entry: {
+		index: ['./src/index.js'],
+	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
-			compress: { warnings: false }
+			compress: {warnings: false}
 		})
 	],
-    module: {
-        loaders: [{
-            test: /\.jsx?$/,
-            loaders: ['babel-loader'],
-            exclude: '/node_modules/'
-        }]
-    },
-    output: {
-        path: path.join(__dirname, 'dist'),
-        publicPath: '/dists/',
-        filename: 'composer-client.js'
-    },
-    devtool: "source-map"
+	module: {
+		loaders: [{
+			test: /\.jsx?$/,
+			loaders: ['babel-loader'],
+			exclude: '/node_modules/'
+		}]
+	},
+	devtool: "source-map"
 };
+
+const frontEnd = {
+	output: {
+		path: path.join(__dirname, 'dist'),
+		publicPath: '/dists/',
+		filename: 'composer-client-frontend.js',
+		libraryTarget: "commonjs2"
+	},
+};
+
+const backEnd = {
+	output: {
+		path: path.join(__dirname, 'dist'),
+		publicPath: '/dists/',
+		filename: 'composer-client-backend.js',
+		libraryTarget: "commonjs2"
+	},
+	target: "node"
+}
+
+module.exports = [
+	Object.assign({},common,frontEnd),
+	Object.assign({},common,backEnd)
+];
