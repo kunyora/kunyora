@@ -13,10 +13,10 @@ function generateMethod({noun, req, method,res}) {
 		//Todo if path is set use the path instead of noun.path and oda shits
 		let path= config.endpoint || noun.path;
 		return req[method](`/${path}/${newConfig.ID?newConfig.ID:''}`,newConfig).then(response => {
-			return res.handleThenables(camelcase(`${method}-${noun.name}`), response)
+			return res.handleThenables(camelcase(`${method}-${noun.name}`),method, response)
 		})
 			.catch(err => {
-				return res.handleCatchables(camelcase(`${method}-${noun.name}`), err)
+				return res.handleCatchables(camelcase(`${method}-${noun.name}`),method, err)
 			})
 	}
 }
