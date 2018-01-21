@@ -8,7 +8,7 @@ import camelcase from "camelcase"
  * @return {*}
  */
 function generateMethod({noun, req, method,res}) {
-	return function (config) {
+	return function (config={}) {
 		const newConfig = Object.assign({}, config);
 		//Todo if path is set use the path instead of noun.path and oda shits
 		let path= config.endpoint || noun.path;
