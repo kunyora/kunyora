@@ -27,16 +27,15 @@ const frontEnd = {
 	output: {
 		path: path.join(__dirname, 'dist'),
 		publicPath: '/dists/',
-		filename: 'composer-client-frontend.js',
-		libraryTarget: "commonjs2"
+		filename: 'composer-client.js',
 	},
 };
 
 const backEnd = {
 	output: {
-		path: path.join(__dirname, 'dist'),
+		path: path.join(__dirname,"/"),
 		publicPath: '/dists/',
-		filename: 'composer-client-backend.js',
+		filename: 'index.js',
 		libraryTarget: "commonjs2"
 	},
 	target: "node"
