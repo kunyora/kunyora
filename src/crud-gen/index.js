@@ -2,10 +2,10 @@ import response from "../res"
 import camelcase from "camelcase"
 
 /**
- *
- * @param nouns
- * @param req {axios}
- * @return {*}
+ * @description generate the crud methods for making the request
+ * @param nouns {string[]|{path,name}[]} the nouns of the RESTFUL API
+ * @param req {AxiosInstance} an axios request instance
+ * @return {function(config)} the request function
  */
 function generateMethod({noun, req, method,res}) {
 	return function (config={}) {
@@ -21,6 +21,13 @@ function generateMethod({noun, req, method,res}) {
 	}
 }
 
+/**
+ * @description used by the composer factory fn to generate all the  CRUD request for the nouns
+ * @param req {axios} the axios request instance
+ * @param config {object} the config passed to the composer factory function
+ * @return {object}
+ * @constructor
+ */
 export default function GenerateCrud(req,config) {
 	let crud = {};
 	const res = response(config);

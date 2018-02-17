@@ -1,4 +1,11 @@
 export default ({ thenables, catchables }) => ({
+	/**
+    * @description handles response that where successful
+	 * @param _name {string} name of the noun object
+	 * @param _method {string} the name of http method
+	 * @param _resObj {axios.response} the axios response
+	 * @return {*}
+	 */
   handleThenables: function (_name, _method, _resObj) {
     let { found, index, wasFoundThroughMethod } = this.isNameAvailableInCallables(_name, _method, thenables)
     if (found) {
@@ -8,7 +15,13 @@ export default ({ thenables, catchables }) => ({
       return _resObj;
     }
   },
-
+	/**
+	 * @description handles response that where failure
+	 * @param _name {string} name of the noun object
+	 * @param _method {string} the name of http method
+	 * @param _errorObj {Error} the AxiosInstance response
+	 * @return {*}
+	 */
   handleCatchables: function (_name, _method, _errorObj) {
     let { found, index, wasFoundThroughMethod } = this.isNameAvailableInCallables(_name, _method, catchables);
     if (found) {
@@ -18,7 +31,14 @@ export default ({ thenables, catchables }) => ({
       throw new Error(_errorObj)
     }
   },
-
+	/**
+    * @description checks if the name or method ha been defined in the thenables or catchables object
+	 * @param _name {string} name of method that made the request
+	 * @param _method {string} http method name
+	 * @param _callable {{thenables,catchables}} the thenables or catchables object
+	 * @return {{found,wasFoundThroughMethod,index}} Object which gives infomation on if a callable was found, was found through
+    * the method name and the index it was found
+	 */
   isNameAvailableInCallables: function (_name, _method, _callable) {
     let _result = {},
       _index = undefined,
