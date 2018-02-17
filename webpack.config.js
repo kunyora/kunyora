@@ -3,6 +3,7 @@
  */
 const path = require('path');
 const webpack = require('webpack');
+const fs = require("fs")
 
 const common = {
 	entry: {
@@ -10,7 +11,9 @@ const common = {
 	},
 	plugins: [
 		new webpack.optimize.UglifyJsPlugin({
-			compress: {warnings: false}
+			compress: {
+				warnings: false
+			}
 		})
 	],
 	module: {
@@ -23,6 +26,14 @@ const common = {
 	devtool: "source-map"
 };
 
+let nodeModules = {}
+fs.readdirSync("node_modules").filter(function (x) {
+		return [".bin"].indexOf(x) == -1
+	})
+	.forEach(function (mod) {
+		nodeModules[mod] = 'commonjs ' + mod;
+	})
+
 const frontEnd = {
 	output: {
 		path: path.join(__dirname, 'dist'),
@@ -33,15 +44,17 @@ const frontEnd = {
 
 const backEnd = {
 	output: {
-		path: path.join(__dirname,"/"),
+		path: path.join(__dirname, "/"),
 		publicPath: '/dists/',
 		filename: 'index.js',
-		libraryTarget: "commonjs2"
+		libraryTarget: "commonjs2",
 	},
-	target: "node"
+	target: "node",
+	externals: nodeModules
+	
 }
 
 module.exports = [
-	Object.assign({},common,frontEnd),
-	Object.assign({},common,backEnd)
+	Object.assign({}, common, frontEnd),
+	Object.assign({}, common, backEnd)
 ];
