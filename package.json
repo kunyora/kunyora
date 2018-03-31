@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Badewa Kayode <badewakayode1@gmail.com>",
+  "author":
+    "Badewa Kayode <badewakayode1@gmail.com>, Anifowoshe Gbenga David <daveanifowoshe@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
