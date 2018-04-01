@@ -5,10 +5,21 @@ import Emitter from "./events";
 import store from "./store";
 import middleware from "./middlewares";
 
+/**
+ * This function is used to create the client instance. It accepts an object of configs
+ * and formats them to return a client instance
+ *
+ * Used in the form
+ * ```
+ *    const clientInstance = composerClient({...config})
+ *
+ * ```
+ *
+ * @return {object}
+ * @param {object} config
+ */
 function composerClient(config) {
-  //work on the config
   const opt = Option(config);
-  //load request
   const _req = req(opt);
   const _emitter = new Emitter();
   const _crud = genCrud(_req, opt);

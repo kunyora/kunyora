@@ -1,8 +1,9 @@
 /**
  * @description filters the properties in the config object to only allow
  * properties that are defined in the allowedProp variable
+ * 
  * @param obj {object} the config object
- * @return {{}} the request config object
+ * @return {Object} the request config object
  */
 export function allowedReqProps(obj) {
 	let allowedProp = {
