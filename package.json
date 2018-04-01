@@ -1,12 +1,16 @@
 {
   "name": "composer-client",
   "version": "1.0.0",
-  "description": "",
+  "description":
+    "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack",
+    "test": "jest",
+    "watch:build": "webpack -w",
+    "watch:test": "jest --watchAll"
   },
-  "keywords": [],
+  "keywords": ["rest", "reactJs", "angular", "vue", "request", "axios"],
   "author":
     "Badewa Kayode <badewakayode1@gmail.com>, Anifowoshe Gbenga David <daveanifowoshe@gmail.com>",
   "license": "MIT",
