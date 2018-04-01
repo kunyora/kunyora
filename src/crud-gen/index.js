@@ -10,7 +10,7 @@ import camelcase from "camelcase";
 function generateMethod({ noun, req, method, res }) {
   return function(config = {}) {
     const newConfig = Object.assign({}, config);
-    //Todo if path is set use the path instead of noun.path
+    //@Todo if path is set use the path instead of noun.path
     let path = config.endpoint || noun.path;
     return req({
       url: `/${path}/${newConfig.ID ? newConfig.ID : ""}`,
