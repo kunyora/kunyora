@@ -55,8 +55,8 @@ export default function GenerateCrud(req, config) {
     ];
     methods.forEach(method => {
       crud[camelcase(`${method[0]}-${noun.name}`)] = generateMethod({
-        noun: noun,
-        req: req,
+        noun,
+        req,
         method: method[1],
         res
       });
