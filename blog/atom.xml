@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://kunyora.github.io/kunyora/blog</id>
+    <title>Kunyora Blog</title>
+    <updated>2018-04-14T06:00:00Z</updated>
+    <generator>Feed for Node.js</generator>
+    <link rel="alternate" href="https://kunyora.github.io/kunyora/blog"/>
+    <subtitle>The best place to stay up-to-date with the latest Kunyora news and events.</subtitle>
+    <logo>https://kunyora.github.io/kunyora/img/headerIcon.png</logo>
+    <rights>Copyright © 2018 StackBench</rights>
+    <entry>
+        <title type="html"><![CDATA[Introducing Kunyora 0.1.0]]></title>
+        <id>https://kunyora.github.io/kunyora/blog/2018/04/14/introducing_kunyora_0.1.0.html</id>
+        <link href="https://kunyora.github.io/kunyora/blog/2018/04/14/introducing_kunyora_0.1.0.html">
+        </link>
+        <updated>2018-04-14T06:00:00Z</updated>
+        <summary type="html"><![CDATA[<p>We are excited to introduce <code>Kunyora</code> which would help manage restful api request made by our apps. <code>Kunyora</code> is a rest based client for Javascript applications built to solve the problem of speed on the long run. Kunyora would automatically be respo</p>
+]]></summary>
+        <author>
+            <name>Anifowoshe Gbenga David</name>
+            <uri>http://twitter.com/david_ani_s</uri>
+        </author>
+    </entry>
+</feed>

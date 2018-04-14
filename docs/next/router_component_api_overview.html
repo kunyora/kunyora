@@ -1,0 +1,99 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Router Api Overview · Kunyora</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Router Api Overview · Kunyora"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kunyora.github.io/kunyora/index.html"/><meta property="og:description" content="The `Router` component is a simple reactJs `render props` component, which you can use in prefetching some contents and a route before navigating to the actual route. This component is not compartible with mobile for now and should only be used on the web."/><link rel="shortcut icon" href="/kunyora/img/tabIcon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kunyora.github.io/blog/atom.xml" title="Kunyora Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kunyora.github.io/blog/feed.xml" title="Kunyora Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/kunyora/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kunyora/"><img class="logo" src="/kunyora/img/headerIcon.png"/><h2 class="headerTitle">Kunyora</h2></a><a href="/kunyora/versions.html"><h3>next</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/kunyora/docs/next/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/kunyora/en/community.html" target="_self">Community</a></li><li class=""><a href="/kunyora/blog" target="_self">Blog</a></li><li class=""><a href="https://github.com/kunyora/kunyora" target="_self">Github</a></li><li class="siteNavGroupActive"><a href="/kunyora/docs/next/query_component.html" target="_self">React-Kunyora</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>react-kunyora</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>The Basics</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/quick_tutorial.html">Quick Tutorial</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/motivation.html">Motivation</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/vision.html">Vision</a></li></ul></div><div class="navGroup navGroupActive"><h3>Kunyora</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/kunyora_tutorial.html">InDepth Tutorial</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/kunyora_api_reference.html">API Reference</a></li></ul></div><div class="navGroup navGroupActive"><h3>react-kunyora</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/kunyora_provider_component.html">KunyoraProvider Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/kunyora_provider_api_reference.html">KunyoraProvider API Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/query_component.html">Query Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/query_component_api_overview.html">Query Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/mutation_component.html">Mutation Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/mutation_component_api_overview.html">Mutation Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/router_component.html">Router Component</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/kunyora/docs/next/router_component_api_overview.html">Router Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/connector_component.html">Connector Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/connector_component_api_overview.html">Connector Api Overview</a></li></ul></div><div class="navGroup navGroupActive"><h3>Contributing</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/how_to_contribute.html">How to Contribute</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/expectations_from_maintainers.html">Expectations from Maintainers</a></li></ul></div><div class="navGroup navGroupActive"><h3>What&#x27;s Next</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/community_tutorials.html">Community Tutorials</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/next/todos.html">Todos</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kunyora/kunyora-website/blob/master/docs/router_component_api_overview.md" target="_blank">Edit</a><h1>Router Api Overview</h1></header><article><div><span><p>The <code>Router</code> component is a simple reactJs <code>render props</code> component, which you can use in prefetching some contents and a route before navigating to the actual route. This component is not compartible with mobile for now and should only be used on the web.</p>
+<h1><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h1>
+<ul>
+<li><p><a href="/kunyora/docs/next/router_component_api_overview.html#name"><code>name</code></a></p></li>
+<li><p><a href="/kunyora/docs/next/router_component_api_overview.html#loader"><code>loader</code></a></p></li>
+<li><p><a href="/kunyora/docs/next/router_component_api_overview.html#resources"><code>resources</code></a></p></li>
+<li><p><a href="/kunyora/docs/next/router_component_api_overview.html#onrequestroute"><code>onRequestRoute</code></a></p></li>
+<li><p><a href="/kunyora/docs/next/router_component_api_overview.html#parameters-passed-to-thispropschildren"><code>Parametrs passed to this.props.children</code></a></p></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h1>
+<h2><a class="anchor" aria-hidden="true" id="props"></a><a href="#props" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
+<h3><a class="anchor" aria-hidden="true" id="name"></a><a href="#name" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>name</code></h3>
+<p>specifies the unique name for your application. If you are code splitting your app on the <code>route</code> level, then make sure the name specified here is the same as the one specifed in the <code>Connector</code> component.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>string</td><td>Yes</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="loader"></a><a href="#loader" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>loader</code></h3>
+<pre><code class="hljs css javascript">&lt;Router loader={() =&gt; <span class="hljs-keyword">import</span>(<span class="hljs-string">"./COMPONENT_TO_DYNAMICALLY_IMPORT"</span>)}&gt;
+  {() =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeComponent</span> /&gt;</span>}
+<span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>
+</code></pre>
+<p>This component is used to dynamically import the component. It returns a promise. If this is not supplied or it is undefined, then code splitting is not done.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th><th>Return Type</th></tr>
+</thead>
+<tbody>
+<tr><td>func</td><td>No</td><td>Promise</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="resources"></a><a href="#resources" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Resources</code></h3>
+<pre><code class="hljs css javascript">&lt;Router
+  resources={[
+    {
+      <span class="hljs-attr">operation</span>: <span class="hljs-string">"YOUR_ACCESOR"</span>,
+      <span class="hljs-attr">config</span>: { ...someConfig },
+      <span class="hljs-attr">fetchPolicy</span>: <span class="hljs-string">"cache-and-network"</span>
+    }
+  ]}
+&gt;
+  {() =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeComponent</span> /&gt;</span>}
+<span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>
+</code></pre>
+<p>This prop can be use to specify an array of queries to prefetch before routing the user to the next screen.</p>
+<p><strong>options</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>operation</td><td>string</td><td>Yes</td><td>This is the accessor that is used to fetch the data. Please refer to the <a href="/kunyora/docs/next/kunyora_tutorial.html">Kunyora tutorial</a> for a brief of how this is formed</td></tr>
+<tr><td>config</td><td>Object</td><td>No</td><td>this is similar to the axios config supplied to its instance. This is sent with the request. Please refer to the <a href="https://github.com/axios/axios/blob/master/README.md">axios</a> docs</td></tr>
+<tr><td>fetchPolicy</td><td>enum(&quot;cache-only&quot;, &quot;network-only&quot;, &quot;cache-and-network&quot;, &quot;cache-first&quot;)</td><td>&quot;cache-first&quot; )</td><td>No (defaults to (&quot;cache-first&quot;))</td><td>specify the fetch type for the query</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="onrequestroute"></a><a href="#onrequestroute" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>onRequestRoute</code></h3>
+<pre><code class="hljs css javascript">&lt;Router onRequestRoute={() =&gt; <span class="hljs-keyword">this</span>.props.history.push(<span class="hljs-string">"/screen"</span>)}&gt;
+  {() =&gt; <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">SomeComponent</span> /&gt;</span>}
+<span class="hljs-tag">&lt;/<span class="hljs-name">Router</span>&gt;</span></span>
+</code></pre>
+<p>is called after successfully downloading the <code>Component</code> and the <code>queries</code> needed for the request view. This code should be a function returning a code which performs the route using any routing library of your choice</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>func</td><td>Yes</td></tr>
+</tbody>
+</table>
+<h1><a class="anchor" aria-hidden="true" id="parameters-passed-to-thispropschildren"></a><a href="#parameters-passed-to-thispropschildren" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Parameters passed to this.props.children</h1>
+<pre><code class="hljs css javascript">&lt;Router name="invitation" loader={() =&gt; import("./Invitation")}&gt;
+  {({ error }, routeProgress, push) =&gt; (
+    &lt;button onClick={push}&gt; Navigate &lt;/button&gt;
+  )}
+&lt;/Router&gt;
+</code></pre>
+<p>This parameters can be used within your app to carry out some functionalities.</p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>error</td><td>any</td><td>specifies any error that occurred from making the handshake</td></tr>
+<tr><td>routeProgress</td><td>Number</td><td>specifies a progress of the download which you could pass to a progress bar to notify the user of the route progress</td></tr>
+<tr><td>push</td><td>func</td><td>should be passed to a component which would start the handskake and prefetch the request</td></tr>
+</tbody>
+</table>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="router_component.html">← Router Component</a><a class="docs-next button" href="connector_component.html">Connector Component →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kunyora/" class="nav-home"></a><div><h5>Docs</h5><a href="/kunyora/docs/en/getting_started.html">Getting Started</a><a href="/kunyora/docs/en/quick_tutorial.html">Tutorial</a><a href="/kunyora/docs/en/kunyora_api_reference.html">API Reference</a><a href="/kunyora/docs/en/how_to_contribute.html">Contributing</a></div><div><h5>Community</h5><a href="#" target="_blank">Stack Overflow</a><a href="https://github.com/kunyora/kunyora/issues">Report a bug on github</a></div><div><h5>More</h5><a href="/kunyora/blog">Blog</a><a href="https://github.com/kunyora/kunyora">GitHub</a><a class="github-button" href="https://github.com/kunyora/kunyora" data-icon="octicon-star" data-count-href="/kunyora/kunyora/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>

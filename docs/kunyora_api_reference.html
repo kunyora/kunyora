@@ -1,0 +1,199 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>API Reference (Kunyora) · Kunyora</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="API Reference (Kunyora) · Kunyora"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kunyora.github.io/kunyora/index.html"/><meta property="og:description" content="This section of the documentation covers the the Api reference of `Kunyora`. It is divided into 3 sections, the `configuration` passed to the client, `exposed methods` by the client and the `configuration` passed to the methods which interact with the api."/><link rel="shortcut icon" href="/kunyora/img/tabIcon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kunyora.github.io/blog/atom.xml" title="Kunyora Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kunyora.github.io/blog/feed.xml" title="Kunyora Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/kunyora/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kunyora/"><img class="logo" src="/kunyora/img/headerIcon.png"/><h2 class="headerTitle">Kunyora</h2></a><a href="/kunyora/versions.html"><h3>0.1.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/kunyora/docs/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/kunyora/en/community.html" target="_self">Community</a></li><li class=""><a href="/kunyora/blog" target="_self">Blog</a></li><li class=""><a href="https://github.com/kunyora/kunyora" target="_self">Github</a></li><li class="siteNavGroupActive"><a href="/kunyora/docs/query_component.html" target="_self">React-Kunyora</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Kunyora</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>The Basics</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/quick_tutorial.html">Quick Tutorial</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/motivation.html">Motivation</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/vision.html">Vision</a></li></ul></div><div class="navGroup navGroupActive"><h3>Kunyora</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_tutorial.html">InDepth Tutorial</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/kunyora/docs/kunyora_api_reference.html">API Reference</a></li></ul></div><div class="navGroup navGroupActive"><h3>react-kunyora</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_provider_component.html">KunyoraProvider Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_provider_api_reference.html">KunyoraProvider API Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/query_component.html">Query Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/query_component_api_overview.html">Query Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/mutation_component.html">Mutation Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/mutation_component_api_overview.html">Mutation Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/router_component.html">Router Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/router_component_api_overview.html">Router Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/connector_component.html">Connector Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/connector_component_api_overview.html">Connector Api Overview</a></li></ul></div><div class="navGroup navGroupActive"><h3>Contributing</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/how_to_contribute.html">How to Contribute</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/expectations_from_maintainers.html">Expectations from Maintainers</a></li></ul></div><div class="navGroup navGroupActive"><h3>What&#x27;s Next</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/community_tutorials.html">Community Tutorials</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/todos.html">Todos</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kunyora/kunyora-website/blob/master/docs/kunyora_api_reference.md" target="_blank">Edit</a><h1>API Reference (Kunyora)</h1></header><article><div><span><p>This section of the documentation covers the the Api reference of <code>Kunyora</code>. It is divided into 3 sections, the <code>configuration</code> passed to the client, <code>exposed methods</code> by the client and the <code>configuration</code> passed to the methods which interact with the api.</p>
+<h2><a class="anchor" aria-hidden="true" id="client-configrationoptions"></a><a href="#client-configrationoptions" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client Configration(Options)</h2>
+<ul>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#baseurl"><code>baseURL</code></a></li>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#nouns"><code>nouns</code></a></li>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#thenables"><code>thenables</code></a></li>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#catchables"><code>catchables</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="methods"></a><a href="#methods" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods</h2>
+<ul>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#request-or-accessor-methods"><code>Request or Accessor methods</code></a></li>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#middleware"><code>middleware</code></a></li>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#store"><code>store</code></a></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="request-methods-configration"></a><a href="#request-methods-configration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request Methods Configration</h1>
+<ul>
+<li><a href="/kunyora/docs/kunyora_api_reference.html#axios-instance-config"><code>Axios instance config</code></a></li>
+</ul>
+<h1><a class="anchor" aria-hidden="true" id="reference"></a><a href="#reference" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Reference</h1>
+<h2><a class="anchor" aria-hidden="true" id="client-configurationoptions"></a><a href="#client-configurationoptions" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Client Configuration(Options)</h2>
+<h3><a class="anchor" aria-hidden="true" id="baseurl"></a><a href="#baseurl" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>baseURL</code></h3>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">let</span> client = KunyoraClient({ <span class="hljs-attr">baseURL</span>: <span class="hljs-string">"ENTER_THE_URL_OF_YOUR_ENDPOINT"</span> });
+</code></pre>
+<p>This should contain your restful endpoint url</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>string</td><td>Yes</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="nouns"></a><a href="#nouns" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>nouns</code></h3>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">let</span> client = kunyoraClient({ <span class="hljs-attr">nouns</span>: [<span class="hljs-string">"ENTER_YOUR_PATH"</span>] });
+
+<span class="hljs-keyword">let</span> client = kunyoraClient({
+  <span class="hljs-attr">nouns</span>: [{ <span class="hljs-attr">path</span>: <span class="hljs-string">"ENTER_YOUR_PATH"</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">"ENTER_AN_OPTIONAL_NAME"</span> }]
+});
+</code></pre>
+<p>specifies an array of routes or paths exposed by the restful api</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>array(enum(string, config.Object))</td><td>Yes</td></tr>
+</tbody>
+</table>
+<p><strong>config.Object</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>path</td><td>string</td><td>Yes</td><td>contains the route to access</td></tr>
+<tr><td>name</td><td>string</td><td>No</td><td>contains a name that can be camel-cased with the accessors to access a specific route e.g we could have getName</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="thenables"></a><a href="#thenables" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>thenables</code></h3>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">let</span> client = kunyoraClient({
+  <span class="hljs-attr">thenables</span>: {
+    ...accessor_methods,
+    <span class="hljs-attr">get</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response, name</span>) </span>{
+      <span class="hljs-comment">/*do something*/</span>
+    },
+    [<span class="hljs-string">"custom_accessor_methods"</span>]: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+      <span class="hljs-comment">/* do something */</span>
+    }
+  }
+});
+</code></pre>
+<p>specifies an object that you should use to handle success responses from your api. This uses a key-based mapping with the accessors to handle the success response. If this property is not passed, then kunyora defaults to attaching a promise to the accessor method itself</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>Object</td><td>No</td></tr>
+</tbody>
+</table>
+<p><strong>Accessor.methods you can use with thenables as keys</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>get</td><td>function</td><td>No</td><td>can be used as a key to handle all get requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td>create</td><td>function</td><td>No</td><td>can be used as a key to handle all posts requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td>update</td><td>function</td><td>No</td><td>can be used as a key to handle all Put requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td>delete</td><td>function</td><td>No</td><td>can be used as a key to handle all delete requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td><code>your_accessors</code></td><td>function</td><td>No</td><td>this is the accessor that <code>kunyoraClient</code> checks to handle any incoming success response. This is formed from camel-casing one of the four default accessors with the <code>name</code> property specified in your <code>nouns</code> or your <code>path</code> property incase a <code>name</code> property is not specified</td></tr>
+</tbody>
+</table>
+<p><strong>parameters passed to Accessor.methods supplied as keys to thenables</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Accessor Methods</th><th>desciption</th></tr>
+</thead>
+<tbody>
+<tr><td>response</td><td>Object</td><td>get, delete, create, update, <code>custom accessor methods</code></td><td>This is a response object containing details used in making the resquest and the actual success response from your api</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="catchables"></a><a href="#catchables" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>catchables</code></h3>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">let</span> client = kunyoraClient({
+  <span class="hljs-attr">catchables</span>: {
+    ...accessor_methods,
+    <span class="hljs-attr">get</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error, name</span>) </span>{
+      <span class="hljs-comment">/*do something*/</span>
+    },
+    [<span class="hljs-string">"custom_accessor_methods"</span>]: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
+      <span class="hljs-comment">/* do something */</span>
+    }
+  }
+});
+</code></pre>
+<p>specifies an object that you should use to handle error responses from your api. This uses a key-based mapping with the accessors to handle the error response. If this property is not passed, then kunyora defaults to attaching a promise to the accessor method itself</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>Object</td><td>No</td></tr>
+</tbody>
+</table>
+<p><strong>Accessor.methods you can use with catchables as keys</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>get</td><td>function</td><td>No</td><td>can be used as a key to handle all get requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td>create</td><td>function</td><td>No</td><td>can be used as a key to handle all posts requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td>update</td><td>function</td><td>No</td><td>can be used as a key to handle all Put requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td>delete</td><td>function</td><td>No</td><td>can be used as a key to handle all delete requests which do not have their accessor specified in the thenables</td></tr>
+<tr><td><code>your_accessors</code></td><td>function</td><td>No</td><td>this is the accessor that <code>kunyoraClient</code> checks to handle any incoming error response. This is formed from camel-casing one of the four default accessors with the <code>name</code> property specified in your <code>nouns</code> or your <code>path</code> property incase a <code>name</code> property is not specified</td></tr>
+</tbody>
+</table>
+<p><strong>parameters passed to Accessor.methods supplied as keys to catchables</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Accessor Methods</th><th>desciption</th></tr>
+</thead>
+<tbody>
+<tr><td>error</td><td>Object</td><td>get, delete, create, update, <code>custom accessor methods</code></td><td>This is a error object containing details used in making the resquest and the actual error response from your api</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="methods"></a><a href="#methods" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Methods</h2>
+<h3><a class="anchor" aria-hidden="true" id="request-or-accessor-methods"></a><a href="#request-or-accessor-methods" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Request or Accessor Methods</code></h3>
+<pre><code class="hljs css javascript">client[<span class="hljs-string">"YOUR_ACCESSOR_METHODS"</span>]({ ...axios_instance_config });
+</code></pre>
+<p>used to communicate with your restful backend. The accessor method is formed from camel-casing one of the four default accessors with the <code>name</code> property specified in your <code>nouns</code> or your <code>path</code> property incase a <code>name</code> property is not specified. Please check out the <a href="/kunyora/docs/kunyora_tutorial.html">InDepth Tutorial</a> section of the documentation for a practical example of how this is done.</p>
+<p>The <code>axios instance config</code> is similar to that provided by the axios documentation.</p>
+<h3><a class="anchor" aria-hidden="true" id="middleware"></a><a href="#middleware" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>middleware</code></h3>
+<pre><code class="hljs css javascript">client.middleware({
+  <span class="hljs-attr">useBeforeRequest</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">headers</span>) </span>{
+    <span class="hljs-comment">//return headers</span>
+  },
+  <span class="hljs-attr">useAfterResponse</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-comment">// do something with all the response</span>
+  }
+});
+</code></pre>
+<p>specifies two <code>optional</code> callbacks that would be used by the application if present before a request is sent and after a response is gotten.</p>
+<p><strong>parameters passed to the middleware's object argument</strong></p>
+<table>
+<thead>
+<tr><th>Name</th><th>Type</th><th>Required</th><th>Passed Parameter Type</th><th>Description</th></tr>
+</thead>
+<tbody>
+<tr><td>useBeforeRequest</td><td>function</td><td>No</td><td>Object</td><td>This function is called before a request is sent. You must return the headers here so the the client instance could make use of it. This function is passed the header object as a parameter</td></tr>
+<tr><td>useAfterResponse</td><td>function</td><td>No</td><td>Object</td><td>This function is called after a response is gotten but before it is handled by any client side code if present. This function is passed the response object as a parameter</td></tr>
+</tbody>
+</table>
+<h3><a class="anchor" aria-hidden="true" id="request-or-accessor-methods"></a><a href="#request-or-accessor-methods" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Request or Accessor Methods</code></h3>
+<pre><code class="hljs css javascript">client.store;
+</code></pre>
+<p>For now, we have not found any usage for this module yet. However, it is currently used by our client-side view libraries like ReactJs to handle the state of our application. It also has a lot of potentials to be used outside of this. Please get across to us incase you feel this should be made public for use. However, for now we would really not go deep into the API's exposed by this module , but we would however update the docs as time goes on.</p>
+<table>
+<thead>
+<tr><th>Type</th><th>Required</th></tr>
+</thead>
+<tbody>
+<tr><td>Object</td><td>No</td></tr>
+</tbody>
+</table>
+<h2><a class="anchor" aria-hidden="true" id="request-methods-configration"></a><a href="#request-methods-configration" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Request Methods Configration</h2>
+<h3><a class="anchor" aria-hidden="true" id="axios-instance-config"></a><a href="#axios-instance-config" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Axios instance config</code></h3>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">let</span> client = kunyoraClient({ ...config });
+
+client[<span class="hljs-string">"YOUR_ACCESSOR"</span>]({ <span class="hljs-attr">params</span>: {}, <span class="hljs-attr">data</span>: {}, ...otherAxiosConfigs });
+</code></pre>
+<p>The instance config is very similar to that provided by axios. Please refer to the <a href="https://github.com/axios/axios/blob/master/README.md">axios documentation</a></p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="kunyora_tutorial.html">← InDepth Tutorial</a><a class="docs-next button" href="kunyora_provider_component.html">KunyoraProvider Component →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kunyora/" class="nav-home"></a><div><h5>Docs</h5><a href="/kunyora/docs/en/getting_started.html">Getting Started</a><a href="/kunyora/docs/en/quick_tutorial.html">Tutorial</a><a href="/kunyora/docs/en/kunyora_api_reference.html">API Reference</a><a href="/kunyora/docs/en/how_to_contribute.html">Contributing</a></div><div><h5>Community</h5><a href="#" target="_blank">Stack Overflow</a><a href="https://github.com/kunyora/kunyora/issues">Report a bug on github</a></div><div><h5>More</h5><a href="/kunyora/blog">Blog</a><a href="https://github.com/kunyora/kunyora">GitHub</a><a class="github-button" href="https://github.com/kunyora/kunyora" data-icon="octicon-star" data-count-href="/kunyora/kunyora/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>

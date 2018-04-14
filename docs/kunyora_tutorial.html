@@ -1,0 +1,189 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>InDepth Tutorial · Kunyora</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="InDepth Tutorial · Kunyora"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kunyora.github.io/kunyora/index.html"/><meta property="og:description" content="In this section, we will examine a very comprehensive tutorial on using `kunyora` for a simple Javascript application. we would cover the usage of the methods exposed by the library with detailed explanations of each of its methods. The `Kunyora` library was built on the popular `axios` library which is its underlaying library for carrying out request. We also assume that you have installed the library using npm or yarn. If you have not done so, please refer to the [installation](/kunyora/docs/getting_started.html) guide to see how this is done. This tutorial would examine the basic usage of `kunyora` without any view library integration, so grab your laptop, seat tight and set your fingers ready to code. Yah!!!"/><link rel="shortcut icon" href="/kunyora/img/tabIcon.png"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kunyora.github.io/blog/atom.xml" title="Kunyora Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kunyora.github.io/blog/feed.xml" title="Kunyora Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/kunyora/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kunyora/"><img class="logo" src="/kunyora/img/headerIcon.png"/><h2 class="headerTitle">Kunyora</h2></a><a href="/kunyora/versions.html"><h3>0.1.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/kunyora/docs/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/kunyora/en/community.html" target="_self">Community</a></li><li class=""><a href="/kunyora/blog" target="_self">Blog</a></li><li class=""><a href="https://github.com/kunyora/kunyora" target="_self">Github</a></li><li class="siteNavGroupActive"><a href="/kunyora/docs/query_component.html" target="_self">React-Kunyora</a></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>Kunyora</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>The Basics</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/quick_tutorial.html">Quick Tutorial</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/motivation.html">Motivation</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/vision.html">Vision</a></li></ul></div><div class="navGroup navGroupActive"><h3>Kunyora</h3><ul><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/kunyora/docs/kunyora_tutorial.html">InDepth Tutorial</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_api_reference.html">API Reference</a></li></ul></div><div class="navGroup navGroupActive"><h3>react-kunyora</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_provider_component.html">KunyoraProvider Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_provider_api_reference.html">KunyoraProvider API Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/query_component.html">Query Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/query_component_api_overview.html">Query Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/mutation_component.html">Mutation Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/mutation_component_api_overview.html">Mutation Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/router_component.html">Router Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/router_component_api_overview.html">Router Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/connector_component.html">Connector Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/connector_component_api_overview.html">Connector Api Overview</a></li></ul></div><div class="navGroup navGroupActive"><h3>Contributing</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/how_to_contribute.html">How to Contribute</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/expectations_from_maintainers.html">Expectations from Maintainers</a></li></ul></div><div class="navGroup navGroupActive"><h3>What&#x27;s Next</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/community_tutorials.html">Community Tutorials</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/todos.html">Todos</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kunyora/kunyora-website/blob/master/docs/kunyora_tutorial.md" target="_blank">Edit</a><h1>InDepth Tutorial</h1></header><article><div><span><p>In this section, we will examine a very comprehensive tutorial on using <code>kunyora</code> for a simple Javascript application. we would cover the usage of the methods exposed by the library with detailed explanations of each of its methods. The <code>Kunyora</code> library was built on the popular <code>axios</code> library which is its underlaying library for carrying out request. We also assume that you have installed the library using npm or yarn. If you have not done so, please refer to the <a href="/kunyora/docs/getting_started.html">installation</a> guide to see how this is done. This tutorial would examine the basic usage of <code>kunyora</code> without any view library integration, so grab your laptop, seat tight and set your fingers ready to code. Yah!!!</p>
+<ul>
+<li><a href="/kunyora/docs/kunyora_tutorial.html#building-a-simple-calculator"><code>Building a Simple Calculator</code></a></li>
+<li><a href="/kunyora/docs/kunyora_tutorial.html#creating-the-restful-backend-with-nodejs"><code>Creating the restful backend with NodeJs</code></a></li>
+<li><a href="/kunyora/docs/kunyora_tutorial.html#creating-the-basic-html-template-for-our-application"><code>Creating the basic html template for our application</code></a></li>
+<li><a href="/kunyora/docs/kunyora_tutorial.html#creating-the-kunyora-client-code-for-our-application"><code>Creating the Kunyora client code for our application</code></a></li>
+<li><a href="/kunyora/docs/kunyora_tutorial.html#creating-a-basic-middleware"><code>Creating a basic middleware</code></a></li>
+</ul>
+<h2><a class="anchor" aria-hidden="true" id="building-a-simple-calculator"></a><a href="#building-a-simple-calculator" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Building a Simple Calculator</h2>
+<p>In this tutorial, we would be building a simple calculator which would interact with our restful backend in nodeJs. You can make use of any backend as the same principles still applies.</p>
+<p>This would be codes in a pure Javascript environment, no <code>ReactJs, VueJs or even AngularJS</code>. The main functions of this calculator would be done in steps.</p>
+<ul>
+<li>The calculator would need to save the name of the current user using a <code>post</code> request.</li>
+<li>The calculator would need to add 2 numbers together by sending a <code>get</code> request with the 2 numbers as <code>database queries</code></li>
+</ul>
+<p>Simple Right!!! , Yah!!!. Now lets dive in and see how we can accomplish this with <code>kunyora</code></p>
+<h3><a class="anchor" aria-hidden="true" id="creating-the-restful-backend-with-nodejs"></a><a href="#creating-the-restful-backend-with-nodejs" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Creating the restful backend with NodeJs</strong></h3>
+<p>This part is now hosted on heroku. Just copy this url <code>https://www.test-kunyora.herokuapp.com</code>, So you might want to skip. However, if you are interested in checking out the implementation of your app on the server then read along.</p>
+<p>Let's create a simple restful backend in <code>nodeJs</code>. Note that this can be done in any server-side language of your choice as the same principles applies. We would be setting up an express server and setting up <code>CORS</code> with it in case you are on a different domain.</p>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">var</span> express = <span class="hljs-built_in">require</span>(<span class="hljs-string">"express"</span>);
+<span class="hljs-keyword">var</span> bodyParser = <span class="hljs-built_in">require</span>(<span class="hljs-string">"body-parser"</span>);
+
+<span class="hljs-keyword">var</span> app = express();
+<span class="hljs-keyword">var</span> router = express.Router();
+
+<span class="hljs-comment">//using cors</span>
+app.use(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res, next</span>) </span>{
+  res.header(<span class="hljs-string">"Access-Control-Allow-Origin"</span>, <span class="hljs-string">"*"</span>);
+  res.header(
+    <span class="hljs-string">"Access-Control-Allow-Headers"</span>,
+    <span class="hljs-string">"Origin, X-Requested-With, Content-Type, Accept, Jwt"</span>
+  );
+  next();
+});
+
+router.route(<span class="hljs-string">"/user"</span>).post(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+  <span class="hljs-keyword">var</span> name = req.body.name;
+  <span class="hljs-keyword">if</span> (name &amp;&amp; name.trim().length !== <span class="hljs-number">0</span>) {
+    res.json({ <span class="hljs-attr">status</span>: <span class="hljs-string">"success"</span> });
+  } <span class="hljs-keyword">else</span> {
+    res.status(<span class="hljs-number">501</span>).json({ <span class="hljs-attr">status</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">"unauthorized user"</span> });
+  }
+});
+
+router.route(<span class="hljs-string">"/compute"</span>).get(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">req, res</span>) </span>{
+  <span class="hljs-keyword">var</span> num1 = req.query[<span class="hljs-string">"num1"</span>],
+    num2 = req.query[<span class="hljs-string">"num2"</span>];
+
+  <span class="hljs-keyword">if</span> (num1 &amp;&amp; num2) {
+    res.json({ <span class="hljs-attr">status</span>: <span class="hljs-string">"success"</span>, <span class="hljs-attr">result</span>: <span class="hljs-built_in">Number</span>(num1) + <span class="hljs-built_in">Number</span>(num2) });
+  } <span class="hljs-keyword">else</span> {
+    res.status(<span class="hljs-number">400</span>).json({ <span class="hljs-attr">status</span>: <span class="hljs-string">"error"</span>, <span class="hljs-attr">message</span>: <span class="hljs-string">"bad command"</span> });
+  }
+});
+
+<span class="hljs-comment">//setting up parser middlewares</span>
+app.use(bodyParser.urlencoded({ <span class="hljs-attr">extended</span>: <span class="hljs-literal">true</span> }));
+app.use(bodyParser.json());
+
+app.listen(<span class="hljs-number">3000</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"server started successfully"</span>);
+});
+</code></pre>
+<p>Wow!!, so we are done with the basic server-side code. Hope its simple enough. All we just did above was to expose 2 routes. A <code>/user</code> route for making post request to save a user and a <code>/compute</code> route for making get request to perform the computation.</p>
+<h3><a class="anchor" aria-hidden="true" id="creating-the-basic-html-template-for-our-application"></a><a href="#creating-the-basic-html-template-for-our-application" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Creating the basic html template for our application</strong></h3>
+<p>Since every application needs a UI for users to interact with, lets go ahead to create a basic template that our application will use. This template is going to be quite ugly since we do not have css , but feel free to make yours colourful.</p>
+<pre><code class="hljs css html">  /* Calculator.html */
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Status: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"status"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"verifyUser"</span>&gt;</span>Verify<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span> Name: <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"name"</span> /&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"num1"</span> /&gt;</span> + <span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"number"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"num2"</span> /&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+      Result: <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"result"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"calculateBtn"</span>&gt;</span>Calculate<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"cdn_link"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/javascript"</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"calculator.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+</code></pre>
+<p>The code above is a simple html sample of a calculator with 3 input fields. The first field would be used in collecting the user's name and saving it in our DB so he/she can be authenticated. The other 2 fields would be used in accepting numbers which would be used for numerical calculation. We include a script pointing to the location of our client side Javascript code at the bottom of the html page</p>
+<h3><a class="anchor" aria-hidden="true" id="creating-the-kunyora-client-code-for-our-application"></a><a href="#creating-the-kunyora-client-code-for-our-application" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Creating the kunyora client code for our application</strong></h3>
+<p>Finally, we get to integrate our html with our client side Javascript. Let's dive in.</p>
+<pre><code class="hljs css javascript"><span class="hljs-comment">/**
+ * calculator.js
+ */</span>
+
+<span class="hljs-comment">//you can use  your custom url if you wrote the above code yourself</span>
+<span class="hljs-keyword">var</span> calculatorBtn = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"calculateBtn"</span>),
+  name = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"name"</span>),
+  num1 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"num1"</span>),
+  num2 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"num2"</span>),
+  status = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"status"</span>),
+  result = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"result"</span>),
+  num2 = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"num2"</span>),
+  verifyUser = <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"verifyUser"</span>),
+  client = KunyoraClient({
+    <span class="hljs-attr">baseURL</span>: <span class="hljs-string">"https://https://www.test-kunyora.herokuapp.com"</span>,
+    <span class="hljs-attr">nouns</span>: [
+      { <span class="hljs-attr">path</span>: <span class="hljs-string">"/user"</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">"user"</span> },
+      { <span class="hljs-attr">path</span>: <span class="hljs-string">"/compute"</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">"compute"</span> }
+    ],
+    <span class="hljs-attr">thenables</span>: {
+      <span class="hljs-attr">createUser</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+        status.innerHTML = <span class="hljs-string">"Verified"</span>;
+      },
+      <span class="hljs-attr">getCompute</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+        result.innerHTML = response.result;
+      }
+    },
+    <span class="hljs-attr">catchables</span>: {
+      <span class="hljs-attr">createUser</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">error</span>) </span>{
+        status.innerHTML = <span class="hljs-string">"Could not verify user"</span>;
+      },
+      <span class="hljs-attr">getCompute</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+        result.innerHTML = response.result;
+      }
+    }
+  });
+
+verifyUser.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  client.createUser({ <span class="hljs-attr">data</span>: <span class="hljs-built_in">JSON</span>.stringify({ <span class="hljs-attr">name</span>: name.value }) });
+};
+
+calculatorBtn.onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">var</span> _num1 = num1.value,
+    _num2 = num2.value;
+  client.getCompute({ <span class="hljs-attr">data</span>: <span class="hljs-built_in">JSON</span>.stringify({ <span class="hljs-attr">num1</span>: _num1, <span class="hljs-attr">num2</span>: _num2 }) });
+};
+</code></pre>
+<p>Okay, Whew!!! we are done typing. Try running your application in a browser to see how it works. Let's do some explaning of the codes.</p>
+<p>The code above simply creates a KunyoraClient instance which your client-side Javascript code can call to perform the computation. So let's do some explaining of the config options.</p>
+<ul>
+<li><p><strong>baseURL</strong>: This url points to the api end point on the server. In our case, this is points to <code>https://https://www.test-kunyora.herokuapp.com</code></p></li>
+<li><p><strong>nouns</strong>: This is an array of type <code>Object or string</code>. <code>Object</code> types should contain a <code>path</code> property which specifies the route which the library should make a request to and an optional <code>name</code> property which would be used when quering the API. If an array containing strings is supplied to the <code>nouns</code> property of the client, then this should be the <code>path</code> that the library should make the request to.</p></li>
+</ul>
+<p>Basically, the library exposes some names to these nouns, <code>create, get, update and delete</code> are all camel-cased with the <code>path</code> supplied to the <code>nouns</code>. For instance, consider the following examples,</p>
+<pre><code class="hljs css text">  ### Illustration <span class="hljs-number">1</span>
+
+   nouns:[<span class="hljs-string">"/admin/posts"</span>]
+
+   This path can be accessed using getAdminPosts, createAdminPosts, deleteAdminPosts and UpdateAdminPosts
+
+
+  ### Illustration <span class="hljs-number">2</span>
+    nouns: [{path: <span class="hljs-string">"admin/posts"</span>}]
+
+    This path can be accessed using getAdminPosts, createAdminPosts, deleteAdminPosts and updateAdminPosts
+
+  ### Illustration <span class="hljs-number">3</span>
+    nouns: [{path: <span class="hljs-string">"admin/posts"</span>, name: <span class="hljs-string">"myposts"</span>}]
+
+    This path can be accessed using getMyposts, createMyposts, deleteMyPosts and updateMyPosts
+</code></pre>
+<p>In our sample code above, we expose <code>/user</code> and <code>/compute</code> as <code>paths</code> having <code>name</code> <code>user</code> and <code>compute</code> respectively.</p>
+<ul>
+<li><p><strong>thenables</strong>: This is a <code>success</code> object containing the name used by <code>KunyoraClient</code> to interact with your apis as keys which would be used in mapping the requests to their respective handlers. It also contains 4 method keys by default; these method keys include <code>get, update, delete and create</code>. The method basically helps in mapping successful database response to their respective handlers. In the example code above, we handle <code>createUser</code> and <code>getCompute</code> api success response. The response object is passed as a parameter to their respective functions. Please refer to the thenables section of the <a href="/kunyora/docs/kunyora_api_reference.html">Api reference</a> for more details on this property and the argument its functions are bounded to.</p></li>
+<li><p><strong>catchables</strong>: This is an <code>error</code> object containing the name used by <code>KunyoraClient</code> to interact with your apis as keys which would be used in mapping the requests to their respective handlers.It also contains 4 method keys by default; these method keys include <code>get, update, delete and create</code>. The method handles errors from the api through the mapped keys. The error Object is passed as a parameter to their respective functions. Please refer to the catchables section of the <a href="/kunyora/docs/kunyora_api_reference.html">Api reference</a> for more details on this property and the argument its functions are bounded to.</p></li>
+</ul>
+<p>The client instance exposes various methods that can then be used to interact with the Api. This methods are formed from the same approach that was explained above in the <a href="/kunyora/docs/kunyora_tutorial.html">nouns section</a>. In our case, the client exposes <code>createUser</code> and <code>getCompute</code> as methods. This methods could also take a config which is typically similar to that supplied to the <code>axios</code> instance during initialization. Please refer to the <a href="https://github.com/axios/axios/blob/master/README.md">axios</a> or the <a href="/kunyora/docs/kunyora_api_reference.html">Api reference</a> for a full insight into the config object.</p>
+<h3><a class="anchor" aria-hidden="true" id="creating-a-basic-middleware"></a><a href="#creating-a-basic-middleware" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><strong>Creating a basic middleware</strong></h3>
+<p>Let's assume you want to build an application that requires you to send the <code>jwt</code> or an <code>appId</code> as an header token. You would mostly want to send this on every request, so the user can be authenticated before a mutation is performed on the database. <code>kunyora</code> allows you to carry this out using our custom <code>middleware</code> exposed by the client instance. Check out this example code.</p>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">let</span> client = KunyoraClient({ ...configs });
+
+client.middleware({
+  <span class="hljs-attr">useBeforeRequest</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">header</span>) </span>{
+    <span class="hljs-keyword">return</span> {
+      ...header,
+      <span class="hljs-attr">common</span>: {
+        ...header.common,
+        <span class="hljs-attr">jwt</span>: <span class="hljs-string">"YOUR_JWT_STRING"</span>
+      }
+    };
+  },
+  <span class="hljs-attr">useAfterResponse</span>: <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">response</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"Hey the response object gotten is "</span>, response);
+  }
+});
+</code></pre>
+<p>The above code seems self explanatory. Looking through, you would notice that we pass two distinct methods. The <code>useBeforeRequest</code> method is a callback that <code>kunyora</code> calls internally before performing a request. You can set headers here, however make sure that you return the headers set in this case. The <code>useAfterResponse</code> method is a callback that <code>kunyora</code> calls internally after a response object must have been gotten.</p>
+<p>Please refer to the <a href="/kunyora/docs/kunyora_api_reference.html">Api reference</a> for a full overview of the methods and properties exposed by the <code>KunyoraClient</code> property</p>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="vision.html">← Vision</a><a class="docs-next button" href="kunyora_api_reference.html">API Reference (Kunyora) →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kunyora/" class="nav-home"></a><div><h5>Docs</h5><a href="/kunyora/docs/en/getting_started.html">Getting Started</a><a href="/kunyora/docs/en/quick_tutorial.html">Tutorial</a><a href="/kunyora/docs/en/kunyora_api_reference.html">API Reference</a><a href="/kunyora/docs/en/how_to_contribute.html">Contributing</a></div><div><h5>Community</h5><a href="#" target="_blank">Stack Overflow</a><a href="https://github.com/kunyora/kunyora/issues">Report a bug on github</a></div><div><h5>More</h5><a href="/kunyora/blog">Blog</a><a href="https://github.com/kunyora/kunyora">GitHub</a><a class="github-button" href="https://github.com/kunyora/kunyora" data-icon="octicon-star" data-count-href="/kunyora/kunyora/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div></body></html>
