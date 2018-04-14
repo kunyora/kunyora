@@ -35,9 +35,9 @@ function generateMethod({ noun, req, method, res }) {
 }
 
 /**
- * @description used by the composer factory fn to generate all the  CRUD request for the nouns
+ * @description used by the kunyora factory fn to generate all the  CRUD request for the nouns
  * @param req {axios} the axios request instance
- * @param config {object} the config passed to the composer factory function
+ * @param config {object} the config passed to the kunyora factory function
  * @return {object}
  * @constructor
  */

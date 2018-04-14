@@ -42,7 +42,7 @@ const browserCompileFirstEnvironment = {
   output: {
     path: path.join(__dirname, "dist"),
     publicPath: "/dists/",
-    filename: "composer-client.js"
+    filename: "kunyora.js"
   }
 };
 

@@ -1,5 +1,5 @@
 {
-  "name": "composer-client",
+  "name": "kunyora",
   "version": "1.0.0",
   "description":
     "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
@@ -10,7 +10,15 @@
     "watch:build": "webpack -w",
     "watch:test": "jest --watchAll"
   },
-  "keywords": ["rest", "reactJs", "angular", "vue", "request", "axios"],
+  "keywords": [
+    "rest",
+    "reactJs",
+    "angular",
+    "vue",
+    "request",
+    "axios",
+    "javascript"
+  ],
   "author":
     "Badewa Kayode <badewakayode1@gmail.com>, Anifowoshe Gbenga David <daveanifowoshe@gmail.com>",
   "license": "MIT",

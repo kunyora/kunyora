@@ -11,14 +11,14 @@ import middleware from "./middlewares";
  *
  * Used in the form
  * ```
- *    const clientInstance = composerClient({...config})
+ *    const clientInstance = kunyoraClient({...config})
  *
  * ```
  *
  * @return {object}
  * @param {object} config
  */
-function composerClient(config) {
+function kunyoraClient(config) {
   const opt = Option(config);
   const _req = req(opt);
   const _emitter = new Emitter();
@@ -27,11 +27,10 @@ function composerClient(config) {
   return Object.assign({}, _emitter, _req, _crud, _middleware, { store });
 }
 
-module.exports = composerClient;
+module.exports = kunyoraClient;
 
 try {
-  window.composerClientFactory = module.exports;
-  console.log("composer-client created for browser");
+  window.kunyoraClientFactory = module.exports;
 } catch (err) {
-  console.log("composer-client created for node env");
+  // do nothing
 }
