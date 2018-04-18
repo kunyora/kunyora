@@ -30,7 +30,7 @@ function kunyoraClient(config) {
 module.exports = kunyoraClient;
 
 try {
-  window.kunyoraClientFactory = module.exports;
+  window.KunyoraClient = module.exports;
 } catch (err) {
   // do nothing
 }
