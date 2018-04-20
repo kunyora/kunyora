@@ -5,9 +5,12 @@ import camelcase from "camelcase";
  * @description generate the crud methods for making the request
  * @param nouns {string[]|{path,name}[]} the nouns of the RESTFUL API
  * @param req {AxiosInstance} an axios request instance
+ * @param method {string}
+ * @param accessor {string}
+ * @param res {Object}
  * @return {function(config)} the request function
  */
-function generateMethod({ noun, req, method, res }) {
+function generateMethod({ noun, req, method, accessor, res }) {
   return function(config = {}) {
     const newConfig = Object.assign({}, config);
     //@Todo if path is set use the path instead of noun.path
@@ -19,15 +22,15 @@ function generateMethod({ noun, req, method, res }) {
     })
       .then(response => {
         return res.handleThenables(
-          camelcase(`${method}-${noun.name}`),
-          method,
+          camelcase(`${accessor}-${noun.name}`),
+          accessor,
           response
         );
       })
       .catch(err => {
         return res.handleCatchables(
-          camelcase(`${method}-${noun.name}`),
-          method,
+          camelcase(`${accessor}-${noun.name}`),
+          accessor,
           err
         );
       });
@@ -58,6 +61,7 @@ export default function GenerateCrud(req, config) {
         noun,
         req,
         method: method[1],
+        accessor: method[0],
         res
       });
     });
