@@ -7,7 +7,8 @@
     "build": "webpack",
     "test": "jest",
     "watch:build": "webpack -w",
-    "watch:test": "jest --watchAll"
+    "watch:test": "jest --watchAll",
+    "prepublish": "yarn install && yarn run build"
   },
   "keywords": [
     "rest",
