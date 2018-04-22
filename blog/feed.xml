@@ -4,7 +4,7 @@
         <title>Kunyora Blog</title>
         <link>https://kunyora.github.io/kunyora/blog</link>
         <description>The best place to stay up-to-date with the latest Kunyora news and events.</description>
-        <lastBuildDate>Sat, 14 Apr 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 22 Apr 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -15,9 +15,9 @@
         <copyright>Copyright © 2018 StackBench</copyright>
         <item>
             <title><![CDATA[Introducing Kunyora 0.1.0]]></title>
-            <link>https://kunyora.github.io/kunyora/blog/2018/04/14/introducing_kunyora_0.1.0.html</link>
-            <guid>https://kunyora.github.io/kunyora/blog/2018/04/14/introducing_kunyora_0.1.0.html</guid>
-            <pubDate>Sat, 14 Apr 2018 06:00:00 GMT</pubDate>
+            <link>https://kunyora.github.io/kunyora/blog/2018/04/22/introducing_kunyora_0.1.0.html</link>
+            <guid>https://kunyora.github.io/kunyora/blog/2018/04/22/introducing_kunyora_0.1.0.html</guid>
+            <pubDate>Sun, 22 Apr 2018 06:00:00 GMT</pubDate>
             <description><![CDATA[<p>We are excited to introduce <code>Kunyora</code> which would help manage restful api request made by our apps. <code>Kunyora</code> is a rest based client for Javascript applications built to solve the problem of speed on the long run. Kunyora would automatically be respo</p>
 ]]></description>
         </item>
