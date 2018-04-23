@@ -52,7 +52,7 @@ Read the [Contributing guide](https://kunyora.github.io/kunyora/docs/how_to_cont
 
 Kunyora is [MIT licensed](./LICENSE).
 
-React-Kunyora is [MIT licensed](https://github.com/kunyora/react-kunyora/blob/master/LICENSE.md)
+React-Kunyora is [MIT licensed](https://github.com/kunyora/react-kunyora/blob/master/LICENSE)
 
-Kunyora documentation is [MIT licensed](https://github.com/kunyora/kunyora-website/blob/master/LICENSE.md)
+Kunyora documentation is [MIT licensed](https://github.com/kunyora/kunyora-website/blob/master/LICENSE)
 
