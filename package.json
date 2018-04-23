@@ -39,5 +39,6 @@
   },
   "homepage": {
     "url": "https://kunyora.github.io/kunyora"
-  }
+  },
+  "unpkg": "dist/kunyora.js"
 }
