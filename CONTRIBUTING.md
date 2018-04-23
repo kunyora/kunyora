@@ -1,10 +1,10 @@
 # Contributing
 
-We are open to, and grateful for, any contributions made by the community. By contributing to kunyora, you agree to abide by the [code of conduct](https://github.com/kayslay/kunyora/blob/master/CODE_OF_CONDUCT.md).
+We are open to, and grateful for, any contributions made by the community. By contributing to kunyora, you agree to abide by the [code of conduct](https://github.com/kunyora/kunyora/blob/master/CODE_OF_CONDUCT.md).
 
 ### Code Style
 
-Please follow the [Airbnb react JS style guide](https://github.com/airbnb/javascript/tree/master/react)
+Please follow the [Airbnb react JS style guide](https://github.com/airbnb/javascript/blob/master/README.md)
 
 ### Commit Messages
 
