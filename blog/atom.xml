@@ -9,16 +9,16 @@
     <logo>https://kunyora.github.io/kunyora/img/headerIcon.png</logo>
     <rights>Copyright © 2018 StackBench</rights>
     <entry>
-        <title type="html"><![CDATA[Introducing Kunyora 0.1.0]]></title>
+        <title type="html"><![CDATA[Kunyora - A new way to write disposable api request code]]></title>
         <id>https://kunyora.github.io/kunyora/blog/2018/04/22/introducing_kunyora_0.1.0.html</id>
         <link href="https://kunyora.github.io/kunyora/blog/2018/04/22/introducing_kunyora_0.1.0.html">
         </link>
         <updated>2018-04-22T06:00:00Z</updated>
-        <summary type="html"><![CDATA[<p>We are excited to introduce <code>Kunyora</code> which would help manage restful api request made by our apps. <code>Kunyora</code> is a rest based client for Javascript applications built to solve the problem of speed on the long run. Kunyora would automatically be respo</p>
+        <summary type="html"><![CDATA[<p>We are excited to introduce the pre-release version of <code>Kunyora</code> which would help manage restful api request. <code>Kunyora</code> is a rest based client for Javascript applications built for writing declarative code while making Api request and ensuring that t</p>
 ]]></summary>
         <author>
             <name>Anifowoshe Gbenga David</name>
-            <uri>http://twitter.com/david_ani_s</uri>
+            <uri>http://twitter.com/David_Ani_s</uri>
         </author>
     </entry>
 </feed>

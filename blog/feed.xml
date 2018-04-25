@@ -14,11 +14,11 @@
         </image>
         <copyright>Copyright © 2018 StackBench</copyright>
         <item>
-            <title><![CDATA[Introducing Kunyora 0.1.0]]></title>
+            <title><![CDATA[Kunyora - A new way to write disposable api request code]]></title>
             <link>https://kunyora.github.io/kunyora/blog/2018/04/22/introducing_kunyora_0.1.0.html</link>
             <guid>https://kunyora.github.io/kunyora/blog/2018/04/22/introducing_kunyora_0.1.0.html</guid>
             <pubDate>Sun, 22 Apr 2018 06:00:00 GMT</pubDate>
-            <description><![CDATA[<p>We are excited to introduce <code>Kunyora</code> which would help manage restful api request made by our apps. <code>Kunyora</code> is a rest based client for Javascript applications built to solve the problem of speed on the long run. Kunyora would automatically be respo</p>
+            <description><![CDATA[<p>We are excited to introduce the pre-release version of <code>Kunyora</code> which would help manage restful api request. <code>Kunyora</code> is a rest based client for Javascript applications built for writing declarative code while making Api request and ensuring that t</p>
 ]]></description>
         </item>
     </channel>
