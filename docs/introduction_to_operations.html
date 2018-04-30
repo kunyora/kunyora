@@ -1,0 +1,97 @@
+<html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><title>Introduction to Operations · Kunyora</title><meta name="viewport" content="width=device-width"/><meta name="generator" content="Docusaurus"/><meta property="og:title" content="Introduction to Operations · Kunyora"/><meta property="og:type" content="website"/><meta property="og:url" content="https://kunyora.github.io/kunyora/index.html"/><meta property="og:description" content="In this section, you will learn about operations and how they are formed and used. Learning about operations should get you acquinted with performing queries and mutations using Kunyora. Hence, this section will be as detailed as possible. With the knowledge of operations, you should be able to make requests and understand how kunyora executes your requests internally."/><meta property="og:image" content="https://kunyora.github.io/kunyora/img/tabIcon.png"/><link rel="shortcut icon" href="/kunyora/img/tabIcon.png"/><link rel="stylesheet" href="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.css"/><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-dark.min.css"/><link rel="alternate" type="application/atom+xml" href="https://kunyora.github.io/blog/atom.xml" title="Kunyora Blog ATOM Feed"/><link rel="alternate" type="application/rss+xml" href="https://kunyora.github.io/blog/feed.xml" title="Kunyora Blog RSS Feed"/><script type="text/javascript" src="https://buttons.github.io/buttons.js"></script><link rel="stylesheet" href="/kunyora/css/main.css"/></head><body class="sideNavVisible doc"><div class="fixedHeaderContainer"><div class="headerWrapper wrapper"><header><a href="/kunyora/"><img class="logo" src="/kunyora/img/headerIcon.png"/><h2 class="headerTitle">Kunyora</h2></a><a href="/kunyora/versions.html"><h3>0.1.0</h3></a><div class="navigationWrapper navigationSlider"><nav class="slidingNav"><ul class="nav-site nav-site-internal"><li class="siteNavGroupActive"><a href="/kunyora/docs/getting_started.html" target="_self">Docs</a></li><li class=""><a href="/kunyora/en/community.html" target="_self">Community</a></li><li class=""><a href="/kunyora/blog" target="_self">Blog</a></li><li class=""><a href="https://github.com/kunyora/kunyora" target="_self">Github</a></li><li class=""><a href="https://github.com/kunyora/react-kunyora" target="_self">React-Kunyora</a></li><li class="navSearchWrapper reactNavSearchWrapper"><input type="text" id="search_input_react" placeholder="Search"/></li></ul></nav></div></header></div></div><div class="navPusher"><div class="docMainWrapper wrapper"><div class="container docsNavContainer" id="docsNav"><nav class="toc"><div class="toggleNav"><section class="navWrapper wrapper"><div class="navBreadcrumb wrapper"><div class="navToggle" id="navToggler"><i></i></div><h2><i>›</i><span>The Basics</span></h2></div><div class="navGroups"><div class="navGroup navGroupActive"><h3>The Basics</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/try_it_out.html">Try Kunyora</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/getting_started.html">Getting Started</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/quick_tutorial.html">Quick Tutorial</a></li><li class="navListItem navListItemActive"><a class="navItem navItemActive" href="/kunyora/docs/introduction_to_operations.html">Introduction to Operations</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/motivation.html">Motivation</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/vision.html">Vision</a></li></ul></div><div class="navGroup navGroupActive"><h3>Kunyora</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_tutorial.html">InDepth Tutorial</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_api_reference.html">API Reference</a></li></ul></div><div class="navGroup navGroupActive"><h3>react-kunyora</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_provider_component.html">KunyoraProvider Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/kunyora_provider_api_reference.html">KunyoraProvider API Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/query_component.html">Query Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/query_component_api_overview.html">Query Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/mutation_component.html">Mutation Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/mutation_component_api_overview.html">Mutation Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/router_component.html">Router Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/router_component_api_overview.html">Router Api Overview</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/connector_component.html">Connector Component</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/connector_component_api_overview.html">Connector Api Overview</a></li></ul></div><div class="navGroup navGroupActive"><h3>Contributing</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/how_to_contribute.html">How to Contribute</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/expectations_from_maintainers.html">Expectations from Maintainers</a></li></ul></div><div class="navGroup navGroupActive"><h3>What&#x27;s Next</h3><ul><li class="navListItem"><a class="navItem" href="/kunyora/docs/community_tutorials.html">Community Tutorials</a></li><li class="navListItem"><a class="navItem" href="/kunyora/docs/todos.html">Todos</a></li></ul></div></div></section></div><script>
+          var toggler = document.getElementById('navToggler');
+          var nav = document.getElementById('docsNav');
+          toggler.onclick = function() {
+            nav.classList.toggle('docsSliderActive');
+          };
+        </script></nav></div><div class="container mainContainer"><div class="wrapper"><div class="post"><header class="postHeader"><a class="edit-page-link button" href="https://github.com/kunyora/kunyora-website/blob/master/docs/introduction_to_operations.md" target="_blank">Edit</a><h1>Introduction to Operations</h1></header><article><div><span><p>In this section, you will learn about operations and how they are formed and used. Learning about operations should get you acquinted with performing queries and mutations using Kunyora. Hence, this section will be as detailed as possible. With the knowledge of operations, you should be able to make requests and understand how kunyora executes your requests internally.</p>
+<p>Basically, we have 5 major http request methods amongst others. They are the <code>get, post, put, patch and delete</code> request headers. Internally, kunyora maps the headers as follows:</p>
+<table>
+<thead>
+<tr><th>request method</th><th>How Kunyora represents the methods internally</th></tr>
+</thead>
+<tbody>
+<tr><td>get</td><td>get</td></tr>
+<tr><td>post</td><td>create</td></tr>
+<tr><td>put</td><td>update</td></tr>
+<tr><td>patch</td><td>partUpdate</td></tr>
+<tr><td>delete</td><td>delete</td></tr>
+</tbody>
+</table>
+<p>The 5 internal representations of these request methods within Kunyora is what we like to call the <code>General Operations</code>, because they can be used within your <code>thenables</code> and <code>catchables</code> object to handle general responses. However, you would want to handle more specific operations. Let's take a deep dive into how specific operations are formed and used.</p>
+<p>Consider the code sample below:</p>
+<pre><code class="hljs css javascript"><span class="hljs-keyword">import</span> KunyoraClient <span class="hljs-keyword">from</span> <span class="hljs-string">'kunyora'</span>;
+
+<span class="hljs-keyword">const</span> client = KunyoraClient({
+  <span class="hljs-attr">url</span>: <span class="hljs-string">'http://localhost:3000'</span>,
+  <span class="hljs-attr">nouns</span>: [{<span class="hljs-attr">path</span>: <span class="hljs-string">'user'</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">'user'</span>}],
+});
+</code></pre>
+<p>In the code sample above, we specify a nouns array with a single object containing a <code>path</code> key whose value is user and <code>name</code> key whose value is user. When this is passsed to Kunyora, Kunyora generates request methods by camel-casing the general operations with the <code>name</code> key. so we have,</p>
+<ul>
+<li>getUser</li>
+<li>createUser</li>
+<li>partUpdateUser</li>
+<li>deleteUser</li>
+<li>updateUser</li>
+</ul>
+<p>These 5 methods above are called <code>specific operations</code>, and kunyora exposes them automatically to any application containing the same config as the code sample above. Hence, a typical request to get a user's information can be carried out using <code>getUser</code> and that to create a user can be carried out using <code>createUser</code>. Its that simple. However there are more complex scenarios. Consider the example code below:</p>
+<pre><code class="hljs css Javascript">  <span class="hljs-keyword">import</span> KunyoraClient <span class="hljs-keyword">from</span> <span class="hljs-string">"kunyora"</span>;
+
+  <span class="hljs-keyword">const</span> client = KunyoraClient({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">"http://localhost:3000"</span>,
+    <span class="hljs-attr">nouns</span>: [<span class="hljs-string">"user/comments"</span>]
+  })
+</code></pre>
+<p>In the code sample above, we supply an array of strings specifying the path instead of an object. Kunyora also generates the specific operations that this path exposes using a technique similar to that which was previously describe, however it does this in a somewhat different fashion. It removes all slashes or non-alphanumeric characters and then camel-case the results with the general operations. so the specific operations for the above code sample becomes:</p>
+<ul>
+<li>getUserComments</li>
+<li>createUserComments</li>
+<li>partUpdateUserComments</li>
+<li>updateUserComments</li>
+<li>deleteUserComments</li>
+</ul>
+<p>However, it is best to specify your nouns as an array of objects instead of strings to avoid confusion.</p>
+<p>Consider the code samples below to improve your understanding on the topic.</p>
+<p><strong>Example 1</strong></p>
+<pre><code class="hljs css Javascript">  <span class="hljs-keyword">const</span> client = KunyoraClient({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">"YOUR_URL"</span>,
+    <span class="hljs-attr">nouns</span>: [{<span class="hljs-attr">path</span>: <span class="hljs-string">"posts"</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">"mediumPosts"</span>}]
+  })
+</code></pre>
+<ul>
+<li>getMediumPosts</li>
+<li>createMediumPosts</li>
+<li>partUpdateMediumPosts</li>
+<li>updateMediumPosts</li>
+<li>deleteMediumPosts</li>
+</ul>
+<p><strong>Example 2</strong></p>
+<pre><code class="hljs css Javascript">  <span class="hljs-keyword">const</span> client = KunyoraClient({
+    <span class="hljs-attr">url</span>: <span class="hljs-string">"YOUR_URL"</span>,
+    <span class="hljs-attr">nouns</span>: [{<span class="hljs-attr">path</span>: <span class="hljs-string">"category/all"</span>, <span class="hljs-attr">name</span>: <span class="hljs-string">"myMusic"</span>}]
+  })
+</code></pre>
+<ul>
+<li>getMyMusic</li>
+<li>createMyMusic</li>
+<li>partUpdateMyMusic</li>
+<li>updateMyMusic</li>
+<li>deleteMyMusic</li>
+</ul>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="quick_tutorial.html">← Quick Tutorial</a><a class="docs-next button" href="motivation.html">Motivation →</a></div></div></div></div><footer class="nav-footer" id="footer"><section class="sitemap"><a href="/kunyora/" class="nav-home"><img src="/kunyora/img/headerIcon.png" alt="Kunyora" width="66" height="58"/></a><div><h5>Docs</h5><a href="/kunyora/docs/en/getting_started.html">Getting Started</a><a href="/kunyora/docs/en/quick_tutorial.html">Tutorial</a><a href="/kunyora/docs/en/kunyora_api_reference.html">API Reference</a><a href="/kunyora/docs/en/how_to_contribute.html">Contributing</a></div><div><h5>Community</h5><a href="#" target="_blank">Stack Overflow</a><a href="https://github.com/kunyora/kunyora/issues">Report a bug on github</a></div><div><h5>More</h5><a href="/kunyora/blog">Blog</a><a href="https://github.com/kunyora/kunyora">GitHub</a><a class="github-button" href="https://github.com/kunyora/kunyora" data-icon="octicon-star" data-count-href="/kunyora/kunyora/stargazers" data-show-count="true" data-count-aria-label="# stargazers on GitHub" aria-label="Star this project on GitHub">Star</a></div></section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+              (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+              (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+              })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+              ga('create', 'UA-117938006-1', 'auto');
+              ga('send', 'pageview');
+            </script><script>
+              var search = docsearch({
+                
+                apiKey: 'd39fbbb67f85db6ed167f93a427b9456',
+                indexName: 'kunyora',
+                inputSelector: '#search_input_react'
+              });
+            </script></body></html>
