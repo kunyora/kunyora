@@ -1,7 +1,8 @@
 {
   "name": "kunyora",
   "version": "0.1.0",
-  "description": "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
+  "description":
+    "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -19,7 +20,10 @@
     "axios",
     "javascript"
   ],
-  "author": "Badewa Kayode <badewakayode1@gmail.com>, Anifowoshe Gbenga David <daveanifowoshe@gmail.com>",
+  "author": [
+    "Anifowoshe Gbenga David <daveanifowoshe@gmail.com> (https://github.com/gbenga504)",
+    "Badewa Kayode <badewakayode1@gmail.com> (https://github.com/kayslay)"
+  ],
   "license": "MIT",
   "devDependencies": {
     "babel-core": "^6.26.0",
