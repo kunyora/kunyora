@@ -1,8 +1,7 @@
 {
   "name": "kunyora",
   "version": "0.1.0",
-  "description":
-    "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
+  "description": "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
   "main": "index.js",
   "scripts": {
     "build": "webpack",
@@ -36,7 +35,8 @@
   "dependencies": {
     "axios": "^0.17.1",
     "camelcase": "^4.1.0",
-    "invariant": "^2.2.2"
+    "invariant": "^2.2.2",
+    "npm-badge": "^1.0.0"
   },
   "bugs": {
     "url": "https://github.com/kunyora/kunyora/issues"

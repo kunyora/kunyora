@@ -1,4 +1,4 @@
-# [Kunyora](https://kunyora.github.io/kunyora) &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md) 
+# [Kunyora](https://kunyora.github.io/kunyora) &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md) &middot; [![NPM](https://nodei.co/npm/kunyora.png?mini=true)](https://npmjs.org/package/kunyora)
 
 A flexible Rest Client for Javascript web and native applications
 
