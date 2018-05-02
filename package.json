@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build": "cross-env BABEL_ENV=es babel src --out-dir es",
     "test": "jest",
     "watch:test": "jest --watchAll",
     "prepublish": "yarn run build"
