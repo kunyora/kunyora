@@ -4,9 +4,9 @@
   "description": "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
     "test": "jest",
-    "watch:build": "webpack -w",
     "watch:test": "jest --watchAll",
     "prepublish": "yarn run build"
   },
@@ -29,6 +29,7 @@
     "babel-loader": "^7.1.2",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
+    "cross-env": "^5.1.4",
     "lodash": "^4.17.4",
     "webpack": "^3.10.0"
   },
