@@ -2,7 +2,14 @@
   "name": "kunyora",
   "version": "0.1.0",
   "description": "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
-  "main": "index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "clean": "rimraf lib dist es",
     "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
