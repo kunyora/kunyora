@@ -1,5 +1,5 @@
 import axios from "axios";
-import { allowedReqProps } from "../util/req";
+import { allowedReqProps } from "./requestOptions";
 
 /**
  * @description creates an AxiosInstance
