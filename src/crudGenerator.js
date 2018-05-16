@@ -1,4 +1,4 @@
-import response from "../res";
+import response from "./responseHandler";
 import camelcase from "camelcase";
 
 /**
