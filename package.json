@@ -2,8 +2,8 @@
   "name": "kunyora",
   "version": "0.1.0",
   "description": "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
-  "main": "lib/index.js",
-  "module": "es/index.js",
+  "main": "lib/Kunyora.js",
+  "module": "es/Kunyora.js",
   "files": [
     "dist",
     "es",
@@ -12,8 +12,8 @@
   ],
   "scripts": {
     "clean": "rimraf lib dist es",
-    "build:commonjs": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
-    "build:es": "cross-env BABEL_ENV=es babel src --out-dir es",
+    "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/kunyora.js",
+    "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/kunyora.js",
     "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/kunyora.js",
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/kunyora.min.js",
     "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
@@ -36,10 +36,12 @@
   ],
   "license": "MIT",
   "devDependencies": {
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "cross-env": "^5.1.4",
     "lodash": "^4.17.4",
     "prettier": "1.12.1",
@@ -48,8 +50,7 @@
     "rollup-plugin-babel": "^3.0.4",
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-replace": "^2.0.0",
-    "rollup-plugin-uglify": "^3.0.0",
-    "webpack": "^3.10.0"
+    "rollup-plugin-uglify": "^3.0.0"
   },
   "dependencies": {
     "axios": "^0.17.1",
@@ -63,5 +64,6 @@
   "homepage": {
     "url": "https://kunyora.github.io/kunyora"
   },
+  "sideEffects": false,
   "unpkg": "dist/kunyora.js"
 }
