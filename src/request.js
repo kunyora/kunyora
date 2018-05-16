@@ -1,5 +1,5 @@
-import axios from "axios";
-import { allowedReqProps } from "./requestOptions";
+import axios from 'axios'
+import { allowedReqProps } from './requestOptions'
 
 /**
  * @description creates an AxiosInstance
@@ -8,6 +8,6 @@ import { allowedReqProps } from "./requestOptions";
  * @constructor
  */
 export default function Req(config) {
-  const reqConfig = allowedReqProps(config);
-  return axios.create(reqConfig);
+  const reqConfig = allowedReqProps(config)
+  return axios.create(reqConfig)
 }

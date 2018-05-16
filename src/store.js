@@ -1,6 +1,6 @@
-import _ from "lodash";
+import _ from 'lodash'
 
-let Store = null;
+let Store = null
 
 /**
  * The Store is a simple object that contains the state of the application while
@@ -22,12 +22,12 @@ export default (Store = {
    * @param {Function} callback
    */
   listen: function(callback) {
-    Store.callbacks.push(callback);
-    var _this = Store;
+    Store.callbacks.push(callback)
+    var _this = Store
     return function() {
-      _this.callbacks.splice(_this.callbacks.indexOf(callback), 1);
-      callback = null;
-    };
+      _this.callbacks.splice(_this.callbacks.indexOf(callback), 1)
+      callback = null
+    }
   },
 
   /**
@@ -37,9 +37,9 @@ export default (Store = {
    */
   performAsyncAction: function(func) {
     function runAsync() {
-      setTimeout(() => func(Store), 0);
+      setTimeout(() => func(Store), 0)
     }
-    runAsync();
+    runAsync()
   },
 
   /**
@@ -53,8 +53,8 @@ export default (Store = {
     Store.state = {
       ...Store.state,
       [action]: args
-    };
-    Store.runCallbacks();
+    }
+    Store.runCallbacks()
   },
 
   /**
@@ -62,8 +62,8 @@ export default (Store = {
    */
   runCallbacks: function() {
     Store.callbacks.forEach(callback => {
-      callback();
-    });
+      callback()
+    })
   },
 
   /**
@@ -72,6 +72,6 @@ export default (Store = {
    * @return {Object}
    */
   getState: function() {
-    return _.cloneDeep(Store.state);
+    return _.cloneDeep(Store.state)
   }
-});
+})

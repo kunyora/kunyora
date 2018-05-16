@@ -1,8 +1,8 @@
-import request from "./request";
-import crudGenerator from "./crudGenerator";
-import Option from "./option";
-import store from "./store";
-import middleware from "./middlewares";
+import request from './request'
+import crudGenerator from './crudGenerator'
+import Option from './option'
+import store from './store'
+import middleware from './middlewares'
 
 /**
  * This function is used to create the client instance. It accepts an object of configs
@@ -18,15 +18,15 @@ import middleware from "./middlewares";
  * @param {object} config
  */
 export default function kunyoraClient(config) {
-  const opt = Option(config);
-  const _request = request(opt);
-  const _crud = crudGenerator(_request, opt);
-  const _middleware = middleware(opt);
-  return { ..._crud, ..._middleware, _request, ...{ store } };
+  const opt = Option(config)
+  const _request = request(opt)
+  const _crud = crudGenerator(_request, opt)
+  const _middleware = middleware(opt)
+  return { ..._crud, ..._middleware, _request, ...{ store } }
 }
 
 try {
-  window.KunyoraClient = kunyoraClient;
+  window.KunyoraClient = kunyoraClient
 } catch (err) {
   // do nothing
 }
