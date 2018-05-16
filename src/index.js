@@ -1,4 +1,4 @@
-import requestOptions from "./requestOptions";
+import request from "./request";
 import crudGenerator from "./crudGenerator";
 import Option from "./option";
 import store from "./store";
@@ -17,18 +17,16 @@ import middleware from "./middlewares";
  * @return {object}
  * @param {object} config
  */
-function kunyoraClient(config) {
+export default function kunyoraClient(config) {
   const opt = Option(config);
-  const _requestOptions = requestOptions(opt);
-  const _crud = crudGenerator(_requestOptions, opt);
+  const _request = request(opt);
+  const _crud = crudGenerator(_request, opt);
   const _middleware = middleware(opt);
-  return { ..._crud, ..._middleware, ...{ store } };
+  return { ..._crud, ..._middleware, _request, ...{ store } };
 }
 
-module.exports = kunyoraClient;
-
 try {
-  window.KunyoraClient = module.exports;
+  window.KunyoraClient = kunyoraClient;
 } catch (err) {
   // do nothing
 }

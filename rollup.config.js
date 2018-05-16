@@ -1,40 +1,42 @@
-import nodeResolve from 'rollup-plugin-node-resolve'
-import babel from 'rollup-plugin-babel'
-import replace from 'rollup-plugin-replace'
-import uglify from 'rollup-plugin-uglify'
+import nodeResolve from "rollup-plugin-node-resolve";
+import babel from "rollup-plugin-babel";
+import replace from "rollup-plugin-replace";
+import uglify from "rollup-plugin-uglify";
 
-const env = process.env.NODE_ENV
+const env = process.env.NODE_ENV;
 const config = {
-  input: 'src/index.js',
+  input: "src/index.js",
   plugins: []
-}
+};
 
-if (env === 'es' || env === 'cjs') {
-  config.output = { format: env, indent: false }
+if (env === "es" || env === "cjs") {
+  config.output = { format: env, indent: false };
+  config.external = ["axios", "camelcase", "invariant", "lodash"];
   config.plugins.push(
     babel({
-      plugins: ['external-helpers'],
+      plugins: ["external-helpers"]
     })
-  )
+  );
 }
 
-if (env === 'development' || env === 'production') {
-  config.output = { format: 'umd', name: 'Kunyora', indent: false }
+if (env === "development" || env === "production") {
+  config.output = { format: "umd", name: "Kunyora", indent: false };
+  config.external = ["axios", "camelcase", "invariant", "lodash"];
   config.plugins.push(
     nodeResolve({
       jsnext: true
     }),
     babel({
-      exclude: 'node_modules/**',
-      plugins: ['external-helpers'],
+      exclude: "node_modules/**",
+      plugins: ["external-helpers"]
     }),
     replace({
-      'process.env.NODE_ENV': JSON.stringify(env)
+      "process.env.NODE_ENV": JSON.stringify(env)
     })
-  )
+  );
 }
 
-if (env === 'production') {
+if (env === "production") {
   config.plugins.push(
     uglify({
       compress: {
@@ -44,7 +46,7 @@ if (env === 'production') {
         warnings: false
       }
     })
-  )
+  );
 }
 
-export default config
+export default config;

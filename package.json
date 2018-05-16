@@ -2,8 +2,8 @@
   "name": "kunyora",
   "version": "0.1.0",
   "description": "A node and browser based Rest request handler built to manage reqeusts in an effective and fast manner",
-  "main": "lib/Kunyora.js",
-  "module": "es/Kunyora.js",
+  "main": "lib/kunyora.js",
+  "module": "es/kunyora.js",
   "files": [
     "dist",
     "es",
@@ -64,6 +64,5 @@
   "homepage": {
     "url": "https://kunyora.github.io/kunyora"
   },
-  "sideEffects": false,
-  "unpkg": "dist/kunyora.js"
+  "sideEffects": false
 }
