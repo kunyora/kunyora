@@ -1,5 +1,5 @@
-import req from "./req";
-import genCrud from "./crud-gen";
+import req from "./requestHandler";
+import genCrud from "./crudGenerator";
 import Option from "./option";
 import Emitter from "./events";
 import store from "./store";
