@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { deepClone } from './utils/helpers'
 
 let Store = null
 
@@ -72,6 +72,6 @@ export default (Store = {
    * @return {Object}
    */
   getState: function() {
-    return _.cloneDeep(Store.state)
+    return deepClone(Store.state)
   }
 })

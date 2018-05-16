@@ -11,7 +11,7 @@ const config = {
 
 if (env === "es" || env === "cjs") {
   config.output = { format: env, indent: false };
-  config.external = ["axios", "camelcase", "lodash"];
+  config.external = ["axios", "camelcase"];
   config.plugins.push(
     babel({
       plugins: ["external-helpers"]
@@ -21,7 +21,7 @@ if (env === "es" || env === "cjs") {
 
 if (env === "development" || env === "production") {
   config.output = { format: "umd", name: "Kunyora", indent: false };
-  config.external = ["axios", "camelcase", "lodash"];
+  config.external = ["axios", "camelcase"];
   config.plugins.push(
     nodeResolve({
       jsnext: true
