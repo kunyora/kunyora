@@ -1,6 +1,7 @@
 /**
- * Prints a warning in the console if it exists.
+ * Prints a warning in the console if the truthy value evaluates to false.
  *
+ * @param {Boolean} truthy The truthy value
  * @param {String} message The warning message.
  * @returns {void}
  */
