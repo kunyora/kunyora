@@ -1,4 +1,4 @@
-import invariant from 'invariant'
+import warning from './utils/warning'
 
 const defaultConfig = {
   nouns: [],
@@ -64,13 +64,13 @@ function generateNouns({ nouns = [] }) {
  * @param {string} type
  */
 function validateNounString(str, type) {
-  invariant(
+  warning(
     typeof str === 'string',
     'Error: ' + !!type
       ? `property ${type} in noun not a string`
       : `noun passed is not a string`
   )
-  invariant(
+  warning(
     /^[0-9a-zA-Z_/]+$/.test(str),
     'Error: ' + !!type
       ? `property ${type} in noun contains invalid char. alphanumeric and underscore allowed`

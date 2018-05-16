@@ -1,5 +1,5 @@
 import axios from 'axios'
-import { allowedReqProps } from './requestOptions'
+import { allowedReqProps } from './utils/optionsFilter'
 
 /**
  * @description creates an AxiosInstance
