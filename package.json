@@ -19,7 +19,7 @@
     "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/kunyora.js",
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/kunyora.min.js",
     "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
-    "test": "jest",
+    "test": "cross-env NODE_ENV=test && jest",
     "watch:test": "jest --watchAll",
     "prepare": "npm run clean && npm run format:check && npm run build"
   },
@@ -42,6 +42,7 @@
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "cross-env": "^5.1.4",
