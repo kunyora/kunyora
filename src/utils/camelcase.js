@@ -32,7 +32,7 @@ function preserveCamelCase(str) {
   return str
 }
 
-module.exports = function(str) {
+export default function(str) {
   if (arguments.length > 1) {
     str = Array.from(arguments)
       .map(x => x.trim())
