@@ -5,6 +5,7 @@
 <url> <loc>https://kunyora.github.io/index.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kunyora.github.io/en/index.html" /> </url>
 <url> <loc>https://kunyora.github.io/users.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kunyora.github.io/en/users.html" /> </url>
 <url> <loc>https://kunyora.github.io/versions.html</loc> <changefreq>weekly</changefreq> <priority>0.5</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kunyora.github.io/en/versions.html" /> </url>
+<url> <loc>https://kunyora.github.io/blog/2018/05/05/rethinking-disposability.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://kunyora.github.io/blog/2018/04/22/introducing_kunyora_0.1.0.html</loc> <changefreq>weekly</changefreq> <priority>0.3</priority> </url>
 <url> <loc>https://kunyora.github.io/docs/next/community_tutorials.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kunyora.github.io/docs/next/community_tutorials.html" /> </url>
 <url> <loc>https://kunyora.github.io/docs/next/connector_component_api_overview.html</loc> <changefreq>hourly</changefreq> <priority>1.0</priority> <xhtml:link rel="alternate" hreflang="en" href="https://kunyora.github.io/docs/next/connector_component_api_overview.html" /> </url>

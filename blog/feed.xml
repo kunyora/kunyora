@@ -4,7 +4,7 @@
         <title>Kunyora Blog</title>
         <link>https://kunyora.github.io/kunyora/blog</link>
         <description>The best place to stay up-to-date with the latest Kunyora news and events.</description>
-        <lastBuildDate>Sun, 22 Apr 2018 06:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 05 May 2018 06:00:00 GMT</lastBuildDate>
         <docs>http://blogs.law.harvard.edu/tech/rss</docs>
         <generator>Feed for Node.js</generator>
         <image>
@@ -13,6 +13,25 @@
             <link>https://kunyora.github.io/kunyora/blog</link>
         </image>
         <copyright>Copyright © 2018 StackBench</copyright>
+        <item>
+            <title><![CDATA[Rethinking - Disposability]]></title>
+            <link>https://kunyora.github.io/kunyora/blog/2018/05/05/rethinking-disposability.html</link>
+            <guid>https://kunyora.github.io/kunyora/blog/2018/05/05/rethinking-disposability.html</guid>
+            <pubDate>Sat, 05 May 2018 06:00:00 GMT</pubDate>
+            <description><![CDATA[<blockquote>
+<p>3 basic principles make good softwares:</p>
+<ul>
+<li>Reusability</li>
+<li>Composability</li>
+<li>Disposability</li>
+</ul>
+</blockquote>
+<blockquote>
+<p>However, building truly disposable software makes it comfortable for engineers to work on the project overtime.</p>
+</blockquote>
+<p>After recently publishing the Kunyora</p>
+]]></description>
+        </item>
         <item>
             <title><![CDATA[Kunyora - A new way to write disposable api request code]]></title>
             <link>https://kunyora.github.io/kunyora/blog/2018/04/22/introducing_kunyora_0.1.0.html</link>
