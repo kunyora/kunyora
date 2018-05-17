@@ -55,7 +55,6 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
-    "camelcase": "^4.1.0",
     "npm-badge": "^1.0.0"
   },
   "bugs": {

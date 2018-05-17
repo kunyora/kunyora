@@ -1,5 +1,5 @@
 import response from './responseHandler'
-import camelcase from 'camelcase'
+import camelcase from './utils/camelcase'
 
 /**
  * @description generate the crud methods for making the request
