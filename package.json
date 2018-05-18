@@ -20,7 +20,7 @@
     "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/kunyora.min.js",
     "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "test": "cross-env NODE_ENV=test && jest",
-    "watch:test": "jest --watchAll",
+    "watch:test": "cross-env NODE_ENV=test && jest --watchAll",
     "prepare": "npm run clean && npm run format:check && npm run build"
   },
   "keywords": [

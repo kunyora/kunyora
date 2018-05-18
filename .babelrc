@@ -7,10 +7,10 @@
       }
     ]
   ],
+  "plugins": ["transform-object-rest-spread"],
   "env": {
     "test": {
       "plugins": ["transform-es2015-modules-commonjs"]
     }
-  },
-  "plugins": ["external-helpers", "transform-object-rest-spread"]
+  }
 }
