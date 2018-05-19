@@ -1,10 +1,9 @@
 # If you only one circle to run on direct commits to master, you can uncomment this out
 # and uncomment the filters: *filter-only-master down below too
 aliases:
-  - &filter-only-master
+  - &filter-ignore-gh-pages
     branches:
-      only:
-        - master
+      ignore: gh-pages
 
   - &npm
     |
@@ -24,27 +23,15 @@ jobs:
       - run: *npm
       - run:
           name: Check Prettier 
-          command: cd website && yarn ci-check
+          command: yarn run format:check
       - run:
-          name: Test Static Wesbite Builds 
-          command: cd website && yarn install && yarn run build 
-
-  deploy-website:
-    <<: *defaults
-    steps:
-      - checkout
-      - run:
-          name: Deploying to GitHub Pages
-          command: |
-            git config --global user.email "kunyora@users.noreply.github.com"
-            git config --global user.name "Kunyora Deployment Script"
-            echo "machine github.com login kunyora password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && GIT_USER=kunyora && CIRCLE_PROJECT_REPONAME=kunyora && yarn run publish-gh-pages
+          name: Run Tests
+          command: yarn run test 
 
 workflows:
   version: 2
 
-  kunyora-website: 
+  kunyora: 
     jobs:
       - tests:
           filters: *filter-ignore-gh-pages
