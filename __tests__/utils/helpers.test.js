@@ -1,4 +1,5 @@
-import { deepClone } from '../../src/utils/helpers'
+let helpers = require('../../src/utils/helpers')
+let deepClone = helpers.deepClone
 
 let A = { name: 'Gbenga' }
 
