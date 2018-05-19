@@ -1,5 +1,5 @@
-import response from "../res";
-import camelcase from "camelcase";
+import response from './responseHandler'
+import camelcase from './utils/camelcase'
 
 /**
  * @description generate the crud methods for making the request
@@ -12,11 +12,11 @@ import camelcase from "camelcase";
  */
 function generateMethod({ noun, req, method, accessor, res }) {
   return function(config = {}) {
-    const newConfig = Object.assign({}, config);
+    const newConfig = Object.assign({}, config)
     //@Todo if path is set use the path instead of noun.path
-    let path = config.endpoint || noun.path;
+    let path = config.endpoint || noun.path
     return req({
-      url: `/${path}/${newConfig.ID ? newConfig.ID : ""}`,
+      url: `/${path}/${newConfig.ID ? newConfig.ID : ''}`,
       ...newConfig,
       method
     })
@@ -25,16 +25,16 @@ function generateMethod({ noun, req, method, accessor, res }) {
           camelcase(`${accessor}-${noun.name}`),
           accessor,
           response
-        );
+        )
       })
       .catch(err => {
         return res.handleCatchables(
           camelcase(`${accessor}-${noun.name}`),
           accessor,
           err
-        );
-      });
-  };
+        )
+      })
+  }
 }
 
 /**
@@ -45,17 +45,17 @@ function generateMethod({ noun, req, method, accessor, res }) {
  * @constructor
  */
 export default function GenerateCrud(req, config) {
-  let crud = {};
-  const res = response(config);
+  let crud = {}
+  const res = response(config)
 
   config.nouns.forEach(noun => {
     const methods = [
-      ["get", "get"],
-      ["create", "post"],
-      ["update", "put"],
-      ["partUpdate", "patch"],
-      ["delete", "delete"]
-    ];
+      ['get', 'get'],
+      ['create', 'post'],
+      ['update', 'put'],
+      ['partUpdate', 'patch'],
+      ['delete', 'delete']
+    ]
     methods.forEach(method => {
       crud[camelcase(`${method[0]}-${noun.name}`)] = generateMethod({
         noun,
@@ -63,8 +63,8 @@ export default function GenerateCrud(req, config) {
         method: method[1],
         accessor: method[0],
         res
-      });
-    });
-  });
-  return crud;
+      })
+    })
+  })
+  return crud
 }

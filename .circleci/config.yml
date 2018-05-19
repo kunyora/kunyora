@@ -1,0 +1,37 @@
+# If you only one circle to run on direct commits to master, you can uncomment this out
+# and uncomment the filters: *filter-only-master down below too
+aliases:
+  - &filter-ignore-gh-pages
+    branches:
+      ignore: gh-pages
+
+  - &npm
+    |
+      sudo npm install -g prettier jest cross-env
+
+defaults: &defaults
+  docker:
+  # specify the version you desire here
+  - image: circleci/node:7.10
+
+version: 2
+jobs:
+  tests: 
+    <<: *defaults
+    steps:
+      - checkout 
+      - run: *npm
+      - run:
+          name: Check Prettier 
+          command: yarn run format:check
+      - run:
+          name: Run Tests
+          command: yarn run test 
+
+workflows:
+  version: 2
+
+  kunyora: 
+    jobs:
+      - tests:
+          filters: *filter-ignore-gh-pages

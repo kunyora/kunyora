@@ -1,11 +1,11 @@
-import invariant from "invariant";
+import warning from './utils/warning'
 
 const defaultConfig = {
   nouns: [],
   thenables: {},
   catchables: {},
   headers: {}
-};
+}
 
 /**
  * This function re-formats the config object supplied by the user by concatenating the object with a default config
@@ -17,10 +17,10 @@ const defaultConfig = {
  *
  */
 export default function Option(config) {
-  let option = Object.assign({}, defaultConfig, config);
-  option.nouns = generateNouns(option);
+  let option = Object.assign({}, defaultConfig, config)
+  option.nouns = generateNouns(option)
   //@Todo validate thenables and catchables
-  return option;
+  return option
 }
 
 /**
@@ -32,7 +32,7 @@ export default function Option(config) {
  * @param {string} name
  */
 function formatSlash(name) {
-  return name.replace(/\/+(\w)/g, (m, p1) => p1.toUpperCase());
+  return name.replace(/\/+(\w)/g, (m, p1) => p1.toUpperCase())
 }
 
 /**
@@ -45,16 +45,16 @@ function formatSlash(name) {
  */
 function generateNouns({ nouns = [] }) {
   return nouns.map((noun, index) => {
-    if (typeof noun === "string") {
-      validateNounString(noun);
-      return { path: noun, name: formatSlash(noun) };
-    } else if (typeof noun === "object" && noun !== null) {
-      validateNounObject(noun);
-      return { path: noun.path, name: formatSlash(noun.name) };
+    if (typeof noun === 'string') {
+      validateNounString(noun)
+      return { path: noun, name: formatSlash(noun) }
+    } else if (typeof noun === 'object' && noun !== null) {
+      validateNounObject(noun)
+      return { path: noun.path, name: formatSlash(noun.name) }
     } else {
-      throw Error("Error: all nouns should either be a string or an object");
+      throw Error('Error: all nouns should either be a string or an object')
     }
-  });
+  })
 }
 
 /**
@@ -64,18 +64,18 @@ function generateNouns({ nouns = [] }) {
  * @param {string} type
  */
 function validateNounString(str, type) {
-  invariant(
-    typeof str === "string",
-    "Error: " + !!type
+  warning(
+    typeof str === 'string',
+    'Error: ' + !!type
       ? `property ${type} in noun not a string`
       : `noun passed is not a string`
-  );
-  invariant(
+  )
+  warning(
     /^[0-9a-zA-Z_/]+$/.test(str),
-    "Error: " + !!type
+    'Error: ' + !!type
       ? `property ${type} in noun contains invalid char. alphanumeric and underscore allowed`
       : ` noun contains invalid char. alphanumeric and underscore allowed`
-  );
+  )
 }
 
 /**
@@ -84,6 +84,6 @@ function validateNounString(str, type) {
  * @param {object{string, string}} param0
  */
 function validateNounObject({ path, name }) {
-  validateNounString(path, "path");
-  validateNounString(name, "name");
+  validateNounString(path, 'path')
+  validateNounString(name, 'name')
 }

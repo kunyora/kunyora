@@ -1,0 +1,17 @@
+{
+  "overrides": [
+    {
+      "files": ".prettierrc",
+      "options": {
+        "parser": "json"
+      }
+    },
+    {
+      "files": ["__tests__/**/*.js", "src/**/*.js"],
+      "options": {
+        "semi": false,
+        "singleQuote": true
+      }
+    }
+  ]
+}
