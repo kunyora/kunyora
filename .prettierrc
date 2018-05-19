@@ -7,7 +7,7 @@
       }
     },
     {
-      "files": "src/**/*.js",
+      "files": ["__tests__/**/*.js", "src/**/*.js"],
       "options": {
         "semi": false,
         "singleQuote": true
