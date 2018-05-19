@@ -26,7 +26,7 @@ jobs:
           command: yarn run format:check
       - run:
           name: Run Tests
-          command: yarn run test 
+          command: yarn install && yarn run test 
 
 workflows:
   version: 2
