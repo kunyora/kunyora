@@ -24,9 +24,3 @@ export default function kunyoraClient(config) {
   const _middleware = middleware(opt)
   return { ..._crud, ..._middleware, _request, ...{ store } }
 }
-
-try {
-  window.KunyoraClient = kunyoraClient
-} catch (err) {
-  // do nothing
-}

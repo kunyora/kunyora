@@ -20,7 +20,7 @@ if (env === "es" || env === "cjs") {
 }
 
 if (env === "development" || env === "production") {
-  config.output = { format: "umd", name: "Kunyora", indent: false };
+  config.output = { format: "umd", name: "kunyoraClient", indent: false };
   config.external = ["axios"];
   config.plugins.push(
     nodeResolve({
