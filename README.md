@@ -1,4 +1,6 @@
-# [Kunyora](https://kunyora.github.io/kunyora) &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md) &middot; [![npm version](https://badge.fury.io/js/kunyora.svg)](https://badge.fury.io/js/kunyora)
+# [Kunyora](https://kunyora.github.io/kunyora) &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](CONTRIBUTING.md) &middot; [![npm version](https://badge.fury.io/js/kunyora.svg)](https://badge.fury.io/js/kunyora) &middot; 
+[![CircleCI](https://img.shields.io/circleci/project/github/RedSparr0w/node-csgo-parser.svg)](https://github.com/kunyora/kunyora)
+
 
 A flexible Rest Client for Javascript web and native applications
 
