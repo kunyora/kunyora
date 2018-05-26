@@ -1,25 +1,24 @@
 {
   "name": "kunyora",
-  "version": "0.1.0",
-  "description":
-    "A flexible and disposable Rest Client for Javascript web and native applications",
+  "version": "0.1.1",
+  "description": "A flexible and disposable Rest Client for Javascript web and native applications",
   "main": "lib/kunyora.js",
   "module": "es/kunyora.js",
-  "files": ["dist", "es", "lib", "src"],
+  "files": [
+    "dist",
+    "es",
+    "lib",
+    "src"
+  ],
   "scripts": {
     "clean": "rimraf lib dist es",
-    "format":
-      "prettier --config ./.prettierrc --write \"{src,__tests__}/**/*.js\"",
-    "format:check":
-      "prettier --config ./.prettierrc --list-different \"{src,__tests__}/**/*.js\"",
+    "format": "prettier --config ./.prettierrc --write \"{src,__tests__}/**/*.js\"",
+    "format:check": "prettier --config ./.prettierrc --list-different \"{src,__tests__}/**/*.js\"",
     "build:commonjs": "cross-env NODE_ENV=cjs rollup -c -o lib/kunyora.js",
     "build:es": "cross-env BABEL_ENV=es NODE_ENV=es rollup -c -o es/kunyora.js",
-    "build:umd":
-      "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/kunyora.js",
-    "build:umd:min":
-      "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/kunyora.min.js",
-    "build":
-      "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
+    "build:umd": "cross-env BABEL_ENV=es NODE_ENV=development rollup -c -o dist/kunyora.js",
+    "build:umd:min": "cross-env BABEL_ENV=es NODE_ENV=production rollup -c -o dist/kunyora.min.js",
+    "build": "npm run build:commonjs && npm run build:es && npm run build:umd && npm run build:umd:min",
     "test": "cross-env NODE_ENV=test && jest",
     "watch:test": "cross-env NODE_ENV=test && jest --watchAll",
     "prepare": "npm run clean && npm run format:check && npm run build"
