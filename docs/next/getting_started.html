@@ -14,21 +14,21 @@
 <p>For this installation, you need to set up <a href="https://nodejs.org/en/download">Node</a>. Afterwards, cd into the project directory and enter the following commands.</p>
 <pre><code class="hljs css powershell">  <span class="hljs-comment">#For use in a Javasript non-native linked environment</span>
 
-  npm install --save kunyora
+  npm install --save-exact kunyora@<span class="hljs-number">0.1</span>.<span class="hljs-number">1</span>
   <span class="hljs-comment"># or with yarn</span>
-  yarn add kunyora
+  yarn add kunyora@<span class="hljs-number">0.1</span>.<span class="hljs-number">1</span> --exact
 </code></pre>
 <p>If you are building a single page application, and you have <a href="https://reactjs.org/docs/add-react-to-a-new-app.html">ReactJs</a> or <a href="https://facebook.github.io/react-native/docs/getting-strted.html">React Native</a> set up as your development environment, you would want to setup react-Kunyora. To set up react-kunyora, cd into the project directory and enter the following commands.</p>
 <pre><code class="hljs css powershell">  <span class="hljs-comment">#For use with reactJs</span>
 
-  npm install --save react-kunyora
+  npm install --save-exact react-kunyora@<span class="hljs-number">0.1</span>.<span class="hljs-number">0</span>
   <span class="hljs-comment">#or with yarn</span>
-  yarn add react-kunyora
+  yarn add react-kunyora@<span class="hljs-number">0.1</span>.<span class="hljs-number">0</span> --exact
 </code></pre>
 <h3><a class="anchor" aria-hidden="true" id="installation-using-cdn-links"></a><a href="#installation-using-cdn-links" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a><code>Installation using cdn links</code></h3>
-<p>If you are not building a single page application, you can use Kunyora and/or react-kunyora from the unpkg CDN. Kunyora would be available in your browser as <code>window.KunyoraClient</code>. Add the script below to your html template. To load a specific version of kunyora and react-kunyora, Just replace <code>0.1.0</code> with the version number.</p>
-<pre><code class="hljs css html">  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">crossorigin</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/kunyora@0.1.0/dist/kunyora.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">crossorigin</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/react-kunyora@0.1.0/dist/react-kunyora.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+<p>If you are not building a single page application, you can use Kunyora from the unpkg CDN. Kunyora would be available in your browser as <code>window.kunyoraClient</code>. Add the script below to your html template. To load a specific version of kunyora, Just replace <code>0.1.1</code> with the version number.</p>
+<pre><code class="hljs css html">  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">crossorigin</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/axios/dist/axios.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">script</span> <span class="hljs-attr">crossorigin</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://unpkg.com/kunyora@0.1.1/dist/kunyora.min.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
 </code></pre>
 <h1><a class="anchor" aria-hidden="true" id="what-s-next"></a><a href="#what-s-next" aria-hidden="true" class="hash-link" ><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>What's Next?</h1>
 <p>Congratulations, you have successfully installed kunyora. What follows are getting acquinted with the rudiments of the library. If you are curious to learn more about the library then check out the <a href="/kunyora/docs/next/quick_tutorial.html">Quick tutorial section</a>.</p>
